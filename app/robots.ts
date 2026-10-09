@@ -6,6 +6,6 @@ export default function robots(): MetadataRoute.Robots {
       userAgent: "*",
       allow: "/",
     },
-    sitemap: "https://moroccanhammamproducts.com/sitemap.xml",
+    sitemap: "https://www.moroccanhammamproducts.com/sitemap.xml",
   };
 }

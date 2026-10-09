@@ -1,4 +1,14 @@
+import { localePagePath, type Locale } from "@/lib/i18n/config";
+
 type LinkRule = { phrase: string; href: string };
+
+function localizeInternalHref(href: string, locale: Locale): string {
+  if (href.startsWith("/blog/")) return `/${locale}${href}`;
+  if (href === "/benefits") return localePagePath(locale, "benefits");
+  if (href === "/private-label") return localePagePath(locale, "private-label");
+  if (href === "/contact") return localePagePath(locale, "contact");
+  return href;
+}
 
 const PAGE_LINKS: Record<string, LinkRule[]> = {
   home: [
@@ -22,13 +32,17 @@ const PAGE_LINKS: Record<string, LinkRule[]> = {
   ],
 };
 
-export function applyPageInternalLinks(page: string, text: string): string {
+export function applyPageInternalLinks(
+  page: string,
+  text: string,
+  locale: Locale = "en",
+): string {
   const rules = PAGE_LINKS[page];
   if (!rules) return text;
   let result = text;
   for (const { phrase, href } of rules) {
     const re = new RegExp(`(?<!\\[)(${phrase.replace(/[.*+?^${}()|[\]\\]/g, "\\$&")})(?!\\])`, "i");
-    result = result.replace(re, `[$1](${href})`);
+    result = result.replace(re, `[$1](${localizeInternalHref(href, locale)})`);
   }
   return result;
 }

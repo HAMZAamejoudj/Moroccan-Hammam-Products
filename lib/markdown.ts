@@ -76,11 +76,24 @@ function linkifyAnchors(
   return result;
 }
 
-function withLocaleBlogHref(href: string, locale: Locale): string {
+function withLocaleInternalHref(href: string, locale: Locale): string {
   if (href.startsWith("/blog/")) return `/${locale}${href}`;
   if (href === "/benefits") return localePagePath(locale, "benefits");
   if (href === "/private-label") return localePagePath(locale, "private-label");
+  if (href === "/contact") return localePagePath(locale, "contact");
+  if (href === "/about") return localePagePath(locale, "about");
   return href;
+}
+
+/** Prefix locale on markdown links that still point at unprefixed app routes. */
+export function prefixLocaleInMarkdownLinks(md: string, locale: Locale): string {
+  return md.replace(
+    /\]\(\/(?!en\/|fr\/|ar\/)(blog\/[^)]+|benefits|private-label|contact|about)\)/g,
+    (_, path: string) => {
+      const href = path.startsWith("blog/") ? `/${path}` : `/${path}`;
+      return `](${withLocaleInternalHref(href, locale)})`;
+    },
+  );
 }
 
 export function prepareBlogMarkdown(
@@ -91,16 +104,10 @@ export function prepareBlogMarkdown(
   let md = stripInternalLinkComments(body);
   md = md.replace(/^#\s+.+\n?/, "");
   const rules = BLOG_LINK_RULES[slug];
-  if (rules && locale === "en") {
+  if (rules) {
     md = linkifyAnchors(md, rules);
   }
-  if (locale !== "en") {
-    md = md.replace(/\]\(\/(blog\/[^)]+|benefits|private-label)\)/g, (_, p) => {
-      const href = p.startsWith("blog/") ? `/${p}` : `/${p}`;
-      return `](${withLocaleBlogHref(href, locale)})`;
-    });
-  }
-  return md;
+  return prefixLocaleInMarkdownLinks(md, locale);
 }
 
 /** Turn `[like this]` into plain text; keep markdown links `[text](url)` intact */

@@ -5,8 +5,8 @@ import { getPageCached } from "@/lib/content";
 import { homePath, isLocale, localePagePath, type Locale } from "@/lib/i18n/config";
 import { buildBenefitsMetadata } from "@/lib/i18n/home-metadata";
 import { getNavLabels } from "@/lib/i18n/messages";
-import { parseFaq, parseSectionIndex, getSectionById } from "@/lib/parse";
-import { JsonLd, breadcrumbSchema, faqSchema } from "@/lib/schema";
+import { parseFaq, parseNumberedSteps, parseSectionIndex, getSectionById } from "@/lib/parse";
+import { JsonLd, breadcrumbSchema, faqSchema, howToSchema } from "@/lib/schema";
 
 type Props = { params: Promise<{ locale: string }> };
 
@@ -27,7 +27,9 @@ export default async function Page({ params }: Props) {
 
   const sections = parseSectionIndex((await getPageCached("benefits", locale)).body);
   const faqSection = getSectionById(sections, "faq");
+  const ritualSection = getSectionById(sections, "ritual");
   const faqs = parseFaq(faqSection?.body ?? "");
+  const ritualSteps = parseNumberedSteps(ritualSection?.body ?? "");
   const nav = getNavLabels(locale);
   const benefitsPath = localePagePath(locale, "benefits");
 
@@ -40,6 +42,9 @@ export default async function Page({ params }: Props) {
             { name: nav.benefits, path: benefitsPath },
           ]),
           faqSchema(faqs),
+          ritualSteps.length > 0
+            ? howToSchema(ritualSection?.title ?? "The ritual, step by step", ritualSteps)
+            : null,
         ].filter(Boolean)}
       />
       <BenefitsPage locale={locale} />

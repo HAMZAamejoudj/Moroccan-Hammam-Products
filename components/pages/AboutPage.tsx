@@ -4,6 +4,7 @@ import { homePath, localeDirection, type Locale } from "@/lib/i18n/config";
 import { getNavLabels } from "@/lib/i18n/messages";
 import {
   parseBoldBulletList,
+  parseBulletList,
   parseButtons,
   parseNumberedSteps,
   parseSectionIndex,
@@ -26,6 +27,9 @@ export async function AboutPage({ locale }: { locale: Locale }) {
   const story = getSectionById(sections, "story");
   const origins = getSectionById(sections, "origins");
   const quality = getSectionById(sections, "quality");
+  const certifications = getSectionById(sections, "certifications");
+  const team = getSectionById(sections, "team");
+  const numbers = getSectionById(sections, "numbers");
   const workWithUs = getSectionById(sections, "work-with-us");
 
   const qualityBody = quality?.body ?? "";
@@ -109,6 +113,48 @@ export async function AboutPage({ locale }: { locale: Locale }) {
             <PlaceholderText text={qualityOutro} />
           </p>
         </section>
+
+        {certifications ? (
+          <section className="mt-16">
+            <SectionHeading title={certifications.title} />
+            <ul className="mt-6 list-disc space-y-3 pl-5 text-sm leading-relaxed text-ink/85 md:text-base">
+              {parseBulletList(certifications.body).map((item) => (
+                <li key={item.slice(0, 32)}>
+                  <PlaceholderText text={item} />
+                </li>
+              ))}
+            </ul>
+          </section>
+        ) : null}
+
+        {team ? (
+          <section className="mt-16">
+            <SectionHeading title={team.title} />
+            <div className="mt-4 max-w-3xl space-y-4 text-base leading-relaxed text-ink/85">
+              {team.body.split("\n\n").map((p) => (
+                <p key={p.slice(0, 24)}>
+                  <PlaceholderText text={p} />
+                </p>
+              ))}
+            </div>
+          </section>
+        ) : null}
+
+        {numbers ? (
+          <section className="mt-16">
+            <SectionHeading title={numbers.title} />
+            <ul className="mt-6 grid gap-4 sm:grid-cols-2">
+              {parseBulletList(numbers.body).map((item) => (
+                <li
+                  key={item.slice(0, 32)}
+                  className="rounded-lg border border-gold/15 bg-cream/30 p-5 text-sm text-ink/85"
+                >
+                  <PlaceholderText text={item} />
+                </li>
+              ))}
+            </ul>
+          </section>
+        ) : null}
 
         <section className="mt-16 pb-4 text-center">
           <SectionHeading title={workWithUs?.title ?? ""} className="mx-auto text-center" />

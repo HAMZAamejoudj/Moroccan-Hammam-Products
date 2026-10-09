@@ -80,18 +80,34 @@ export async function submitContact(
 
   const apiKey = process.env.RESEND_API_KEY;
   const to = process.env.CONTACT_TO_EMAIL;
+  const from =
+    process.env.RESEND_FROM_EMAIL ??
+    "Moroccan Hammam Products <onboarding@resend.dev>";
 
-  if (apiKey && to) {
+  if (!apiKey || !to) {
+    console.error("[contact form] Missing RESEND_API_KEY or CONTACT_TO_EMAIL");
+    return {
+      ok: false,
+      message: ui.sendError,
+    };
+  }
+
+  try {
     const resend = new Resend(apiKey);
-    await resend.emails.send({
-      from: "Moroccan Hammam Products <onboarding@resend.dev>",
+    const { error } = await resend.emails.send({
+      from,
       to: [to],
       replyTo: data.email,
       subject: `Quote request from ${data.name} (${data.country})`,
       text: body,
     });
-  } else {
-    console.info("[contact form — RESEND not configured]", body);
+    if (error) {
+      console.error("[contact form] Resend error:", error);
+      return { ok: false, message: ui.sendError };
+    }
+  } catch (err) {
+    console.error("[contact form] Resend exception:", err);
+    return { ok: false, message: ui.sendError };
   }
 
   return {

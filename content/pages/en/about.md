@@ -35,6 +35,26 @@ Every batch gets a batch number you can trace back to its production date and ra
 
 We keep a retained sample of every batch for 12 months, so if a client reports a problem we can test the same batch.
 
+## [certifications] Certifications and documents
+
+We supply the paperwork your customs broker and quality team expect:
+
+- Certificate of analysis (COA) for argan and prickly pear oils on every batch.
+- Batch numbers on bulk tubs and retail units, with retained samples for 12 months.
+- Commercial invoice, packing list and certificate of origin for export shipments.
+- Organic or other certificates on request when available for the product line you order.
+
+## [team] The team
+
+You work directly with our sales and export team in Agadir: quotes, samples, label checks and shipping updates on WhatsApp or email. Production and quality staff in our workshop prepare your order; we do not hand you off to a call centre.
+
+## [numbers] Our numbers
+
+- [40+] countries supplied with hammam products and kits.
+- [6] core ritual products in one catalog: black soap, kessa, ghassoul, argan oil, rose water and masks.
+- [48] hours typical reply time for wholesale quotes on working days.
+- [12] months retained sample storage for traceability.
+
 ## [work-with-us] Work with us
 
 Whether you need 20 kg of black soap for your spa or a full private label range, the first step is the same: tell us what you need.

@@ -1,5 +1,6 @@
 "use client";
 
+import Link from "next/link";
 import { useActionState } from "react";
 import { submitContact, ContactFormState } from "@/app/actions/contact";
 import { Button } from "@/components/ui/Button";
@@ -153,7 +154,13 @@ export function QuoteForm({
       >
         {pending ? ui.submitting : ui.submit}
       </button>
-      <p className="text-xs text-ink/70">{ui.privacyNote}</p>
+      <p className="text-xs text-ink/70">
+        {ui.privacyNote}{" "}
+        <Link href="/privacy-policy" className="link-underline text-primary">
+          {ui.privacyPolicyLink}
+        </Link>
+        .
+      </p>
       {!state.ok && state.message ? (
         <p className="text-sm text-accent" role="alert">
           {state.message}

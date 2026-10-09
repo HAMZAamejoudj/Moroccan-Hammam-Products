@@ -30,7 +30,7 @@ const notoArabic = Noto_Sans_Arabic({
 const config = getSiteConfig();
 
 export const metadata: Metadata = {
-  metadataBase: new URL("https://moroccanhammamproducts.com"),
+  metadataBase: new URL("https://www.moroccanhammamproducts.com"),
   title: {
     default: config.brand_name,
     template: `%s | ${config.brand_name}`,

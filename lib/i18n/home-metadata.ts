@@ -8,7 +8,6 @@ export function buildHomeMetadata(locale: Locale): Metadata {
   return buildPageMetadata(locale, "home", homePath(locale), {
     en: "/en",
     fr: "/fr",
-    ar: "/ar",
     "x-default": "/en",
   });
 }
@@ -18,7 +17,6 @@ export function buildAboutMetadata(locale: Locale): Metadata {
   return buildPageMetadata(locale, "about", path, {
     en: "/en/about",
     fr: "/fr/about",
-    ar: "/ar/about",
     "x-default": "/en/about",
   });
 }
@@ -28,7 +26,6 @@ export function buildBenefitsMetadata(locale: Locale): Metadata {
   return buildPageMetadata(locale, "benefits", path, {
     en: "/en/benefits",
     fr: "/fr/benefits",
-    ar: "/ar/benefits",
     "x-default": "/en/benefits",
   });
 }
@@ -38,7 +35,6 @@ export function buildPrivateLabelMetadata(locale: Locale): Metadata {
   return buildPageMetadata(locale, "private-label", path, {
     en: "/en/private-label",
     fr: "/fr/private-label",
-    ar: "/ar/private-label",
     "x-default": "/en/private-label",
   });
 }
@@ -54,7 +50,6 @@ export function buildBlogIndexMetadata(locale: Locale): Metadata {
       languages: {
         en: "/en/blog",
         fr: "/fr/blog",
-        ar: "/ar/blog",
         "x-default": "/en/blog",
       },
     },
@@ -76,7 +71,6 @@ export function buildContactMetadata(locale: Locale): Metadata {
   return buildPageMetadata(locale, "contact", path, {
     en: "/en/contact",
     fr: "/fr/contact",
-    ar: "/ar/contact",
     "x-default": "/en/contact",
   });
 }
@@ -93,7 +87,6 @@ export function buildBlogPostMetadata(locale: Locale, slug: string): Metadata {
       languages: {
         en: blogPostPath("en", slug),
         fr: blogPostPath("fr", slug),
-        ar: blogPostPath("ar", slug),
         "x-default": blogPostPath("en", slug),
       },
     },

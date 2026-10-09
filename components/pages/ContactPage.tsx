@@ -9,6 +9,9 @@ import { PlaceholderText } from "@/components/ui/PlaceholderText";
 import { FAQ } from "@/components/sections/FAQ";
 import { QuoteForm } from "@/components/contact/QuoteForm";
 
+const MAP_EMBED_SRC =
+  "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d110123.45678901234!2d-9.598107!3d30.427755!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd0b875e4b8f8f8f%3A0x0!2sAgadir%2C%20Morocco!5e0!3m2!1sen!2sma!4v1700000000000!5m2!1sen!2sma";
+
 export async function ContactPage({ locale }: { locale: Locale }) {
   const page = await getPageCached("contact", locale);
   const config = getSiteConfig();
@@ -19,6 +22,7 @@ export async function ContactPage({ locale }: { locale: Locale }) {
   const tips = getSectionById(sections, "tips");
   const visit = getSectionById(sections, "visit");
   const faq = getSectionById(sections, "faq");
+  const officeAddress = config.office_address || ui.officeAddress;
 
   return (
     <div className="bg-white" dir={localeDirection(locale)} lang={locale}>
@@ -65,15 +69,22 @@ export async function ContactPage({ locale }: { locale: Locale }) {
               </a>
             </li>
             <li>
-              <strong className="text-ink">{ui.office}:</strong> {ui.officeAddress}
-            </li>
-            <li>
-              <strong className="text-ink">{ui.workshop}:</strong> {ui.workshopAddress}
-            </li>
-            <li>
-              <strong className="text-ink">{ui.hours}:</strong> {ui.hoursValue}
+              <strong className="text-ink">{ui.hours}:</strong> {config.hours || ui.hoursValue}
             </li>
           </ul>
+
+          <h2 className="mt-10 font-serif text-xl text-ink">{ui.office}</h2>
+          <p className="mt-2 text-sm text-ink/85">{officeAddress}</p>
+          <div className="mt-4 overflow-hidden rounded-lg border border-gold/20 shadow-sm">
+            <iframe
+              title={ui.mapTitle}
+              src={MAP_EMBED_SRC}
+              className="h-56 w-full border-0"
+              loading="lazy"
+              referrerPolicy="no-referrer-when-downgrade"
+              allowFullScreen
+            />
+          </div>
 
           <h2 className="mt-10 font-serif text-xl text-ink">{visit?.title ?? ui.visitHeading}</h2>
           <p className="mt-3 text-sm text-ink/85">

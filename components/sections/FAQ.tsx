@@ -1,6 +1,3 @@
-"use client";
-
-import { useId, useState } from "react";
 import { FaqItem, unwrapBracketPlaceholders } from "@/lib/parse";
 import { cn } from "@/lib/cn";
 
@@ -22,26 +19,21 @@ export function FAQ({ items, title = "Frequently asked questions" }: { items: Fa
 }
 
 function FaqRow({ item }: { item: FaqItem }) {
-  const [open, setOpen] = useState(false);
-  const panelId = useId();
   const answer = unwrapBracketPlaceholders(item.answer);
 
   return (
-    <div className="py-5">
+    <details className="group py-5">
       <dt>
-        <button
-          type="button"
-          className="flex w-full items-start justify-between gap-4 text-left text-base font-medium text-ink focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary"
-          aria-expanded={open}
-          aria-controls={panelId}
-          onClick={() => setOpen((v) => !v)}
+        <summary
+          className={cn(
+            "flex cursor-pointer list-none items-start justify-between gap-4 text-left text-base font-medium text-ink",
+            "focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary",
+            "[&::-webkit-details-marker]:hidden",
+          )}
         >
           <span className="pr-2">{item.question}</span>
           <span
-            className={cn(
-              "mt-0.5 shrink-0 text-gold transition-transform duration-200",
-              open && "rotate-180",
-            )}
+            className="mt-0.5 shrink-0 text-gold transition-transform duration-200 group-open:rotate-180"
             aria-hidden
           >
             <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -54,15 +46,9 @@ function FaqRow({ item }: { item: FaqItem }) {
               />
             </svg>
           </span>
-        </button>
+        </summary>
       </dt>
-      <dd
-        id={panelId}
-        hidden={!open}
-        className="mt-3 pr-8 text-sm leading-relaxed text-ink/85 md:text-base"
-      >
-        {answer}
-      </dd>
-    </div>
+      <dd className="mt-3 pr-8 text-sm leading-relaxed text-ink/85 md:text-base">{answer}</dd>
+    </details>
   );
 }

@@ -2,7 +2,9 @@ import type { MetadataRoute } from "next";
 import { getAllBlogSlugs } from "@/lib/content";
 import { locales, type Locale } from "@/lib/i18n/config";
 
-const BASE = "https://moroccanhammamproducts.com";
+import { SITE_ORIGIN } from "@/lib/site-url";
+
+const BASE = SITE_ORIGIN;
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const staticRoutes = [

@@ -1,6 +1,6 @@
 ---
 brand_name: "Moroccan Hammam Products"
-domain: "https://moroccanhammamproducts.com"
+domain: "https://www.moroccanhammamproducts.com"
 language: "en"
 tagline: "Moroccan hammam products, wholesale from Morocco"
 whatsapp: "+212 648-273228"
@@ -68,8 +68,8 @@ WhatsApp button on every page (bottom right), linking to `https://wa.me/[number 
   "@context": "https://schema.org",
   "@type": "Organization",
   "name": "[Brand name]",
-  "url": "https://moroccanhammamproducts.com/",
-  "logo": "https://moroccanhammamproducts.com/logo.webp",
+  "url": "https://www.moroccanhammamproducts.com/",
+  "logo": "https://www.moroccanhammamproducts.com/logo.webp",
   "address": {
     "@type": "PostalAddress",
     "streetAddress": "[street]",

@@ -3,7 +3,7 @@ url: "/benefits"
 seo_title: "Benefits of Moroccan Hammam Products for Skin & Business"
 meta_description: "What black soap, kessa, ghassoul clay, argan oil and rose water each do in the hammam ritual, and why spas and shops that stock them keep clients coming back."
 main_keyword: "benefits of moroccan hammam products"
-schema: ["Article", "FAQPage"]
+schema: ["Article", "HowTo", "FAQPage"]
 ---
 
 # What Each Hammam Product Does, and Why It Works Together
@@ -18,7 +18,7 @@ A Moroccan hammam is a sequence, not a single product. Steam opens the skin, bla
 - Thick paste, no foam: easy to spread over the whole body in one minute.
 
 ### [kessa] Kessa glove
-- Mechanical exfoliation with no grains and no chemicals.
+- Mechanical exfoliation with no grains or added actives.
 - Visible result in one session: smoother, brighter-looking skin.
 - Reusable for months if washed and dried properly.
 
@@ -39,6 +39,15 @@ A Moroccan hammam is a sequence, not a single product. Steam opens the skin, bla
 ### [nila-aker] Nila powder and aker fassi
 - Nila (indigo plant powder) is used in masks for a more even-looking, radiant complexion.
 - Aker fassi (poppy petals) gives a natural tint for lips and cheeks.
+
+## [ritual] The ritual, step by step
+
+1. Steam and warm water (about 10 minutes) until the skin is fully softened.
+2. Spread a thin layer of black soap over the body; no rubbing needed.
+3. Rest with the soap on for 5 to 10 minutes while the paste softens dead skin.
+4. Rinse thoroughly, then exfoliate with the kessa in long, firm strokes section by section.
+5. Apply ghassoul paste over the body, keep it moist, then rinse with warm and cooler water.
+6. Mist rose water on the face and massage argan oil into the skin to finish.
 
 ## [business] Benefits for your business
 

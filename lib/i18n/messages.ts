@@ -334,6 +334,9 @@ export type ContactUiMessages = {
   submit: string;
   submitting: string;
   privacyNote: string;
+  privacyPolicyLink: string;
+  mapTitle: string;
+  sendError: string;
   successMessage: string;
   whatsAppUs: string;
   fixErrors: string;
@@ -387,8 +390,11 @@ const contactUi: Record<Locale, ContactUiMessages> = {
     productOther: "other",
     submit: "Send my request",
     submitting: "Sending…",
-    privacyNote:
-      "We use your details only to answer your request. No newsletter unless you ask for it.",
+    privacyNote: "We use your details only to answer your request.",
+    privacyPolicyLink: "Privacy policy",
+    mapTitle: "Moroccan Hammam Products office on Google Maps",
+    sendError:
+      "We could not send your message right now. Please try again or contact us on WhatsApp.",
     successMessage:
       "Thank you. We received your request and will reply within [48 hours]. For a faster answer, message us on WhatsApp.",
     whatsAppUs: "WhatsApp us",
@@ -441,8 +447,11 @@ const contactUi: Record<Locale, ContactUiMessages> = {
     productOther: "autre",
     submit: "Envoyer ma demande",
     submitting: "Envoi…",
-    privacyNote:
-      "Vos données servent uniquement à répondre à votre demande. Pas de newsletter sans votre accord.",
+    privacyNote: "Vos données servent uniquement à répondre à votre demande.",
+    privacyPolicyLink: "Politique de confidentialité",
+    mapTitle: "Bureau Moroccan Hammam Products sur Google Maps",
+    sendError:
+      "Impossible d'envoyer votre message pour le moment. Réessayez ou contactez-nous sur WhatsApp.",
     successMessage:
       "Merci. Nous avons bien reçu votre demande et répondrons sous [48 h]. Pour une réponse plus rapide, écrivez-nous sur WhatsApp.",
     whatsAppUs: "Nous écrire sur WhatsApp",
@@ -495,7 +504,10 @@ const contactUi: Record<Locale, ContactUiMessages> = {
     productOther: "أخرى",
     submit: "إرسال الطلب",
     submitting: "جاري الإرسال…",
-    privacyNote: "نستخدم بياناتك فقط للرد على طلبك. لا نشرة إخبارية إلا بطلبك.",
+    privacyNote: "نستخدم بياناتك فقط للرد على طلبك.",
+    privacyPolicyLink: "سياسة الخصوصية",
+    mapTitle: "موقع Moroccan Hammam Products على خرائط Google",
+    sendError: "تعذّر إرسال رسالتك الآن. أعد المحاولة أو تواصل معنا عبر واتساب.",
     successMessage:
       "شكراً. استلمنا طلبك وسنرد خلال [48 ساعة]. للرد الأسرع، راسلنا على واتساب.",
     whatsAppUs: "راسلنا على واتساب",

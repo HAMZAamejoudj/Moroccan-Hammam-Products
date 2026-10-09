@@ -1,16 +1,15 @@
 import { FaqItem } from "./parse";
 import { SiteConfig } from "./site-config";
 import { BlogFrontmatter } from "./content";
-
-const BASE = "https://moroccanhammamproducts.com";
+import { absoluteUrl, SITE_ORIGIN } from "./site-url";
 
 export function organizationSchema(config: SiteConfig) {
   return {
     "@context": "https://schema.org",
     "@type": "Organization",
     name: config.brand_name,
-    url: `${BASE}/`,
-    logo: `${BASE}/logo.webp`,
+    url: `${SITE_ORIGIN}/`,
+    logo: absoluteUrl("/logo.webp"),
     address: {
       "@type": "PostalAddress",
       streetAddress: config.office_address,
@@ -37,7 +36,7 @@ export function websiteSchema() {
     "@context": "https://schema.org",
     "@type": "WebSite",
     name: "Moroccan Hammam Products",
-    url: `${BASE}/`,
+    url: `${SITE_ORIGIN}/`,
   };
 }
 
@@ -51,7 +50,7 @@ export function breadcrumbSchema(
       "@type": "ListItem",
       position: i + 1,
       name: item.name,
-      item: `${BASE}${item.path}`,
+      item: absoluteUrl(item.path),
     })),
   };
 }
@@ -101,8 +100,8 @@ export function articleSchema(
     },
     datePublished: fm.date,
     dateModified: fm.date,
-    image: `${BASE}${image}`,
-    mainEntityOfPage: `${BASE}/blog/${fm.slug}`,
+    image: absoluteUrl(image),
+    mainEntityOfPage: absoluteUrl(`/en/blog/${fm.slug}`),
   };
 }
 
@@ -125,7 +124,7 @@ export function aboutPageSchema(headline: string) {
     "@context": "https://schema.org",
     "@type": "AboutPage",
     name: headline,
-    url: `${BASE}/about`,
+    url: absoluteUrl("/en/about"),
   };
 }
 
@@ -133,7 +132,7 @@ export function contactPageSchema() {
   return {
     "@context": "https://schema.org",
     "@type": "ContactPage",
-    url: `${BASE}/contact`,
+    url: absoluteUrl("/en/contact"),
   };
 }
 

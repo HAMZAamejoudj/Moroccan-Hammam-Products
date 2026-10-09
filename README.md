@@ -42,7 +42,7 @@ If `RESEND_API_KEY` is missing, submissions are logged to the server console and
 
 1. Import this repository as a Vercel project (root directory: `.`).
 2. Set environment variables in the Vercel dashboard.
-3. Deploy. `metadataBase` is already set to `https://moroccanhammamproducts.com`.
+3. Deploy. `metadataBase` is already set to `https://www.moroccanhammamproducts.com`.
 
 ## Scripts
 

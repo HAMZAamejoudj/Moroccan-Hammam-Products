@@ -24,7 +24,7 @@ export function buildPageMetadata(
       description,
       url: canonicalPath,
       locale: localeOpenGraph(locale),
-      alternateLocale: ["en_US", "fr_FR", "ar_MA"].filter(
+      alternateLocale: ["en_US", "fr_FR"].filter(
         (l) => l !== localeOpenGraph(locale),
       ),
     },

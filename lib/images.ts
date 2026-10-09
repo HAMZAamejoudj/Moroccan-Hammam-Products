@@ -53,7 +53,7 @@ export const siteImages = {
   },
   productionLine: {
     src: "/images/products/product-10.webp",
-    alt: "Moroccan organica production line with bulk black soap, ghassoul and scrubs",
+    alt: "Moroccan hammam production line with bulk black soap, ghassoul and scrubs",
   },
   harvestLine: {
     src: "/images/products/product-11.webp",
@@ -69,7 +69,7 @@ export const siteImages = {
   },
   arganBottles: {
     src: "/images/products/product-14.webp",
-    alt: "Moroccan Organica organic argan oil in 250 ml wholesale bottles",
+    alt: "Moroccan argan oil in 250 ml wholesale bottles",
   },
   argamaraLine: {
     src: "/images/products/product-15.webp",

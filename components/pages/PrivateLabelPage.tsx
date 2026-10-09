@@ -48,7 +48,7 @@ function PlImage({
 }
 
 function privateLabelCopy(locale: Locale, text: string) {
-  return locale === "en" ? applyPageInternalLinks("private-label", text) : text;
+  return applyPageInternalLinks("private-label", text, locale);
 }
 
 function isCatalogButton(label: string) {
@@ -112,8 +112,8 @@ export async function PrivateLabelPage({ locale }: { locale: Locale }) {
             priority
           />
           <PlImage
-            src={privateLabelImages.labeledDropperBottles.src}
-            alt={privateLabelImages.labeledDropperBottles.alt}
+            src={privateLabelImages.palletExport.src}
+            alt={privateLabelImages.palletExport.alt}
             className="aspect-[4/3]"
           />
         </div>
@@ -164,16 +164,11 @@ export async function PrivateLabelPage({ locale }: { locale: Locale }) {
             )}
           />
         </div>
-        <div className="mx-auto mt-10 grid max-w-6xl gap-6 px-4 md:grid-cols-2">
+        <div className="mx-auto mt-10 max-w-6xl px-4">
           <PlImage
             src={privateLabelImages.labeledSerumLine.src}
             alt={privateLabelImages.labeledSerumLine.alt}
-            className="aspect-[16/10]"
-          />
-          <PlImage
-            src={privateLabelImages.palletExport.src}
-            alt={privateLabelImages.palletExport.alt}
-            className="aspect-[16/10]"
+            className="aspect-[16/10] max-w-3xl"
           />
         </div>
       </section>
@@ -193,22 +188,12 @@ export async function PrivateLabelPage({ locale }: { locale: Locale }) {
                 ))}
             </div>
           </div>
-          <PlImage
-            src={privateLabelImages.bulkTubs.src}
-            alt={privateLabelImages.bulkTubs.alt}
-            className="aspect-[4/3]"
-          />
         </div>
       </section>
 
       <section className="bg-white py-14 md:py-20">
         <div className="mx-auto grid max-w-6xl items-start gap-10 px-4 md:grid-cols-2">
-          <PlImage
-            src={privateLabelImages.labeledSerumLine.src}
-            alt={privateLabelImages.labeledSerumLine.alt}
-            className="aspect-[4/3] md:order-2"
-          />
-          <div className="md:order-1">
+          <div>
             <SectionHeading title={packaging?.title ?? ""} />
             <ul className="mt-4 list-disc space-y-2 pl-5 text-sm leading-relaxed text-ink/85 md:text-base">
               {(packaging?.body ?? "")
@@ -219,6 +204,11 @@ export async function PrivateLabelPage({ locale }: { locale: Locale }) {
                 ))}
             </ul>
           </div>
+          <PlImage
+            src={privateLabelImages.labeledDropperBottles.src}
+            alt={privateLabelImages.labeledDropperBottles.alt}
+            className="aspect-[4/3]"
+          />
         </div>
       </section>
 
@@ -228,13 +218,6 @@ export async function PrivateLabelPage({ locale }: { locale: Locale }) {
           <p className="mt-4 max-w-3xl text-sm leading-relaxed text-ink/85 md:text-base">
             <PlaceholderText text={labels?.body ?? ""} />
           </p>
-          <div className="mt-8">
-            <PlImage
-              src={privateLabelImages.labeledDropperBottles.src}
-              alt={privateLabelImages.labeledDropperBottles.alt}
-              className="aspect-[21/9] max-w-4xl"
-            />
-          </div>
         </div>
       </section>
 

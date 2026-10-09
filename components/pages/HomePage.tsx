@@ -30,7 +30,7 @@ import { getSiteConfig } from "@/lib/site-config";
 import { whatsappUrl } from "@/lib/whatsapp-url";
 
 function homeCopy(locale: Locale, text: string) {
-  return locale === "en" ? applyPageInternalLinks("home", text) : text;
+  return applyPageInternalLinks("home", text, locale);
 }
 
 export async function HomePage({ locale }: { locale: Locale }) {

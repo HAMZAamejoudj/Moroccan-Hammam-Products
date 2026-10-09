@@ -8,6 +8,7 @@ import {
   parseFaq,
   parseSectionIndex,
   getSectionById,
+  parseNumberedSteps,
   parseSubsectionEntries,
   unwrapBracketPlaceholders,
 } from "@/lib/parse";
@@ -17,9 +18,10 @@ import { Breadcrumbs } from "@/components/ui/Breadcrumbs";
 import { SectionHeading } from "@/components/ui/SectionHeading";
 import { PlaceholderText } from "@/components/ui/PlaceholderText";
 import { FAQ } from "@/components/sections/FAQ";
+import { StepsTimeline } from "@/components/sections/StepsTimeline";
 
 function benefitsCopy(locale: Locale, text: string) {
-  return locale === "en" ? applyPageInternalLinks("benefits", text) : text;
+  return applyPageInternalLinks("benefits", text, locale);
 }
 
 export async function BenefitsPage({ locale }: { locale: Locale }) {
@@ -29,6 +31,7 @@ export async function BenefitsPage({ locale }: { locale: Locale }) {
   const nav = getNavLabels(locale);
 
   const products = getSectionById(sections, "products");
+  const ritual = getSectionById(sections, "ritual");
   const business = getSectionById(sections, "business");
   const storage = getSectionById(sections, "storage");
   const faq = getSectionById(sections, "faq");
@@ -65,8 +68,7 @@ export async function BenefitsPage({ locale }: { locale: Locale }) {
               return (
                 <article
                   key={id ?? title}
-                  id={id}
-                  className="scroll-mt-28 flex h-full flex-col overflow-hidden rounded-xl border border-gold/15 bg-white shadow-sm ring-1 ring-ink/5"
+                  className="flex h-full flex-col overflow-hidden rounded-xl border border-gold/15 bg-white shadow-sm ring-1 ring-ink/5"
                 >
                   {imgs.length > 0 ? (
                     <div
@@ -101,7 +103,12 @@ export async function BenefitsPage({ locale }: { locale: Locale }) {
                     </div>
                   ) : null}
                   <div className="flex flex-1 flex-col p-6">
-                    <h3 className="font-serif text-xl text-ink">{title}</h3>
+                    <h3
+                      id={id}
+                      className="scroll-mt-28 font-serif text-xl text-ink"
+                    >
+                      {title}
+                    </h3>
                     <ul className="mt-3 list-disc space-y-2 pl-5 text-sm text-ink/85">
                       {body
                         .split("\n")
@@ -119,6 +126,18 @@ export async function BenefitsPage({ locale }: { locale: Locale }) {
           </div>
         </div>
       </section>
+
+      {ritual ? (
+        <section className="border-t border-gold/10 bg-cream/40 py-14 md:py-20">
+          <div className="mx-auto max-w-6xl px-4">
+            <SectionHeading title={ritual.title} className="max-w-none" />
+            <StepsTimeline
+              className="mt-10"
+              steps={parseNumberedSteps(ritual.body).map((s) => benefitsCopy(locale, s))}
+            />
+          </div>
+        </section>
+      ) : null}
 
       <section className="border-t border-gold/10 bg-white py-14 md:py-20">
         <div className="mx-auto max-w-6xl px-4">
