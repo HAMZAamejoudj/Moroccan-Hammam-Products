@@ -20,6 +20,9 @@
 # production
 /build
 
+# local photo archive (not used by the site)
+/image/
+
 # misc
 .DS_Store
 *.pem
