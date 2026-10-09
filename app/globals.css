@@ -1,0 +1,106 @@
+@import "tailwindcss";
+
+:root {
+  --cream: #f7f2ea;
+  --surface: #ede3d3;
+  --ink: #1f1d17;
+  --primary: #3e4a2e;
+  --accent: #b4583a;
+  --rose: #d9a5a0;
+  --gold: #b8964e;
+  --background: var(--cream);
+  --foreground: var(--ink);
+}
+
+@theme inline {
+  --color-cream: var(--cream);
+  --color-surface: var(--surface);
+  --color-ink: var(--ink);
+  --color-primary: var(--primary);
+  --color-accent: var(--accent);
+  --color-rose: var(--rose);
+  --color-gold: var(--gold);
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --font-sans: var(--font-manrope);
+  --font-serif: var(--font-cormorant);
+}
+
+body {
+  background: #ffffff;
+  color: var(--ink);
+  font-family: var(--font-manrope), system-ui, sans-serif;
+}
+
+main {
+  background: #ffffff;
+}
+
+.placeholder {
+  border-bottom: 1px dashed color-mix(in srgb, var(--accent) 55%, transparent);
+  text-decoration: none;
+}
+
+.link-underline {
+  text-decoration: underline;
+  text-decoration-color: color-mix(in srgb, var(--gold) 70%, transparent);
+  text-underline-offset: 3px;
+}
+
+.link-underline:hover {
+  color: var(--primary);
+}
+
+.prose-hammam h2 {
+  scroll-margin-top: 6rem;
+  margin-top: 2.5rem;
+  font-family: var(--font-cormorant), Georgia, serif;
+  font-size: 1.75rem;
+  line-height: 1.25;
+  color: var(--ink);
+}
+
+.prose-hammam h3 {
+  margin-top: 1.75rem;
+  font-family: var(--font-cormorant), Georgia, serif;
+  font-size: 1.35rem;
+  color: var(--ink);
+}
+
+.prose-hammam p,
+.prose-hammam li {
+  margin-top: 0.75rem;
+  line-height: 1.7;
+  color: color-mix(in srgb, var(--ink) 88%, transparent);
+}
+
+.prose-hammam ul,
+.prose-hammam ol {
+  margin-top: 0.75rem;
+  padding-left: 1.25rem;
+}
+
+.prose-hammam table {
+  display: block;
+  overflow-x: auto;
+  margin: 1.5rem 0;
+  border: 1px solid color-mix(in srgb, var(--gold) 35%, transparent);
+  border-radius: 0.5rem;
+}
+
+.prose-hammam th,
+.prose-hammam td {
+  border: 1px solid color-mix(in srgb, var(--gold) 25%, transparent);
+  padding: 0.5rem 0.75rem;
+  text-align: left;
+  font-size: 0.875rem;
+}
+
+.prose-hammam a {
+  text-decoration: underline;
+  text-decoration-color: color-mix(in srgb, var(--gold) 70%, transparent);
+}
+
+.prose-hammam .placeholder {
+  border-bottom: 1px dashed color-mix(in srgb, var(--accent) 55%, transparent);
+}
