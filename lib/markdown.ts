@@ -88,12 +88,17 @@ function withLocaleInternalHref(href: string, locale: Locale): string {
 /** Prefix locale on markdown links that still point at unprefixed app routes. */
 export function prefixLocaleInMarkdownLinks(md: string, locale: Locale): string {
   return md.replace(
-    /\]\(\/(?!en\/|fr\/|ar\/)(blog\/[^)]+|benefits|private-label|contact|about)\)/g,
+    /\]\(\/(?!en\/|fr\/|ar\/)(blog(?:\/[^)]+)?|benefits|private-label|contact|about)\)/g,
     (_, path: string) => {
-      const href = path.startsWith("blog/") ? `/${path}` : `/${path}`;
+      const href = path.startsWith("blog") ? `/${path}` : `/${path}`;
       return `](${withLocaleInternalHref(href, locale)})`;
     },
   );
+}
+
+/** Locale-prefix relative links in any page markdown before HTML render. */
+export function preparePageMarkdown(body: string, locale: Locale): string {
+  return prefixLocaleInMarkdownLinks(normalizeBracketPlaceholders(body), locale);
 }
 
 export function prepareBlogMarkdown(

@@ -1,7 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import { getPageCached } from "@/lib/content";
-import { blogPostPath, type Locale } from "@/lib/i18n/config";
+import { blogPostPath, localePagePath, type Locale } from "@/lib/i18n/config";
 import { getHomeUi } from "@/lib/i18n/messages";
 import {
   firstParagraphAfterH1,
@@ -130,10 +130,11 @@ export async function HomePage({ locale }: { locale: Locale }) {
               <ProductCard
                 key={title}
                 title={title}
-                description={stripEditorNotes(desc)}
+                description={homeCopy(locale, stripEditorNotes(desc))}
                 image={homeProductCardImages[i] ?? homeProductCardImages[0]}
-                contactHref="/contact"
+                contactHref={localePagePath(locale, "contact")}
                 ctaLabel={ui.requestQuote}
+                locale={locale}
               />
             ))}
           </div>
@@ -151,7 +152,7 @@ export async function HomePage({ locale }: { locale: Locale }) {
               >
                 <h3 className="font-serif text-xl text-ink">{card.title}</h3>
                 <p className="mt-2 text-sm leading-relaxed text-ink/85">
-                  <PlaceholderText text={card.body} />
+                  <PlaceholderText text={homeCopy(locale, card.body)} locale={locale} />
                 </p>
               </div>
             ))}
@@ -224,7 +225,14 @@ export async function HomePage({ locale }: { locale: Locale }) {
         </div>
       </PageSection>
 
-      <FAQ items={parseFaq(faq?.body ?? "")} title={faq?.title} />
+      <FAQ
+        items={parseFaq(faq?.body ?? "").map((item) => ({
+          ...item,
+          answer: homeCopy(locale, item.answer),
+        }))}
+        title={faq?.title}
+        locale={locale}
+      />
 
       <PageSection className="py-10 md:py-12">
         <div className="mx-auto max-w-6xl px-4 text-center text-sm">

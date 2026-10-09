@@ -1,7 +1,17 @@
-import { FaqItem, unwrapBracketPlaceholders } from "@/lib/parse";
+import { FaqItem } from "@/lib/parse";
 import { cn } from "@/lib/cn";
+import { PlaceholderText } from "@/components/ui/PlaceholderText";
+import type { Locale } from "@/lib/i18n/config";
 
-export function FAQ({ items, title = "Frequently asked questions" }: { items: FaqItem[]; title?: string }) {
+export function FAQ({
+  items,
+  title = "Frequently asked questions",
+  locale = "en",
+}: {
+  items: FaqItem[];
+  title?: string;
+  locale?: Locale;
+}) {
   return (
     <section className="bg-white py-10 md:py-12" aria-labelledby="faq-heading">
       <div className="mx-auto max-w-3xl px-0">
@@ -10,7 +20,7 @@ export function FAQ({ items, title = "Frequently asked questions" }: { items: Fa
         </h2>
         <dl className="mt-10 divide-y divide-gold/15">
           {items.map((item) => (
-            <FaqRow key={item.question} item={item} />
+            <FaqRow key={item.question} item={item} locale={locale} />
           ))}
         </dl>
       </div>
@@ -18,9 +28,7 @@ export function FAQ({ items, title = "Frequently asked questions" }: { items: Fa
   );
 }
 
-function FaqRow({ item }: { item: FaqItem }) {
-  const answer = unwrapBracketPlaceholders(item.answer);
-
+function FaqRow({ item, locale }: { item: FaqItem; locale: Locale }) {
   return (
     <details className="group py-5">
       <dt>
@@ -48,7 +56,9 @@ function FaqRow({ item }: { item: FaqItem }) {
           </span>
         </summary>
       </dt>
-      <dd className="mt-3 pr-8 text-sm leading-relaxed text-ink/85 md:text-base">{answer}</dd>
+      <dd className="mt-3 pr-8 text-sm leading-relaxed text-ink/85 md:text-base">
+        <PlaceholderText text={item.answer} locale={locale} />
+      </dd>
     </details>
   );
 }

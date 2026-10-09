@@ -234,7 +234,7 @@ export async function PrivateLabelPage({ locale }: { locale: Locale }) {
         </div>
       </section>
 
-      <FAQ items={parseFaq(faq?.body ?? "")} title={faq?.title} />
+      <FAQ items={parseFaq(faq?.body ?? "")} title={faq?.title} locale={locale} />
 
       <div className="mx-auto max-w-6xl px-4 pb-20 pt-4 text-center">
         <Button href="/contact">{plUi.startProjectFooter}</Button>

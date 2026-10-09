@@ -1,6 +1,7 @@
 import Image from "next/image";
 import { Button } from "@/components/ui/Button";
-import { unwrapBracketPlaceholders } from "@/lib/parse";
+import { PlaceholderText } from "@/components/ui/PlaceholderText";
+import type { Locale } from "@/lib/i18n/config";
 
 export function ProductCard({
   title,
@@ -8,12 +9,14 @@ export function ProductCard({
   image,
   contactHref = "/contact",
   ctaLabel = "Request a quote",
+  locale,
 }: {
   title: string;
   description: string;
   image?: { src: string; alt: string };
   contactHref?: string;
   ctaLabel?: string;
+  locale: Locale;
 }) {
   return (
     <article className="group flex h-full flex-col overflow-hidden rounded-xl border border-gold/15 bg-white shadow-sm ring-1 ring-ink/5 transition hover:border-gold/40 hover:shadow-md">
@@ -31,7 +34,7 @@ export function ProductCard({
       <div className="flex flex-1 flex-col p-5 md:p-6">
         <h3 className="font-serif text-lg leading-snug text-ink md:text-xl">{title}</h3>
         <p className="mt-2 flex-1 text-sm leading-relaxed text-ink/80">
-          {unwrapBracketPlaceholders(description)}
+          <PlaceholderText text={description} locale={locale} />
         </p>
         <div className="mt-5 pt-1">
           <Button href={contactHref} variant="secondary" className="w-full text-sm">

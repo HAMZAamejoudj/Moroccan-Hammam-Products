@@ -106,7 +106,7 @@ export function ArticleLayout({
 
         {faqs.length > 0 ? (
           <div className="mt-16 max-w-3xl">
-            <FAQ items={faqs} title={ui.faqTitle} />
+            <FAQ items={faqs} title={ui.faqTitle} locale={locale} />
           </div>
         ) : null}
 

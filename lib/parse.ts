@@ -131,9 +131,9 @@ export function parseAudienceCards(text: string): { title: string; body: string 
     .filter(Boolean) as { title: string; body: string }[];
 }
 
-/** Render `[like this]` as plain text without brackets or placeholder styling */
+/** Render `[like this]` as plain text; keep markdown links `[text](url)` intact */
 export function unwrapBracketPlaceholders(text: string): string {
-  return text.replace(/\[([^\]]+)\]/g, "$1");
+  return text.replace(/\[([^\]]+)\](?!\()/g, "$1");
 }
 
 /** Remove markdown-only lines (buttons, editor notes) from rendered copy */

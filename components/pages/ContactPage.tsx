@@ -93,7 +93,7 @@ export async function ContactPage({ locale }: { locale: Locale }) {
         </aside>
       </section>
 
-      <FAQ items={parseFaq(faq?.body ?? "")} title={ui.faqTitle} />
+      <FAQ items={parseFaq(faq?.body ?? "")} title={ui.faqTitle} locale={locale} />
     </div>
   );
 }

@@ -184,7 +184,14 @@ export async function BenefitsPage({ locale }: { locale: Locale }) {
         </div>
       </section>
 
-      <FAQ items={parseFaq(faq?.body ?? "")} title={faq?.title ?? "FAQ"} />
+      <FAQ
+        items={parseFaq(faq?.body ?? "").map((item) => ({
+          ...item,
+          answer: benefitsCopy(locale, item.answer),
+        }))}
+        title={faq?.title ?? "FAQ"}
+        locale={locale}
+      />
     </div>
   );
 }

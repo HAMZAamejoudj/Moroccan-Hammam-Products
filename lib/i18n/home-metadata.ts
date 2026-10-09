@@ -3,11 +3,13 @@ import { getBlogPost } from "@/lib/content";
 import { blogPath, blogPostPath, homePath, localeOpenGraph, type Locale } from "@/lib/i18n/config";
 import { getBlogUi } from "@/lib/i18n/messages";
 import { buildPageMetadata } from "@/lib/i18n/page-metadata";
+import { absoluteUrl } from "@/lib/site-url";
 
 export function buildHomeMetadata(locale: Locale): Metadata {
   return buildPageMetadata(locale, "home", homePath(locale), {
     en: "/en",
     fr: "/fr",
+    ar: "/ar",
     "x-default": "/en",
   });
 }
@@ -17,6 +19,7 @@ export function buildAboutMetadata(locale: Locale): Metadata {
   return buildPageMetadata(locale, "about", path, {
     en: "/en/about",
     fr: "/fr/about",
+    ar: "/ar/about",
     "x-default": "/en/about",
   });
 }
@@ -26,6 +29,7 @@ export function buildBenefitsMetadata(locale: Locale): Metadata {
   return buildPageMetadata(locale, "benefits", path, {
     en: "/en/benefits",
     fr: "/fr/benefits",
+    ar: "/ar/benefits",
     "x-default": "/en/benefits",
   });
 }
@@ -35,6 +39,7 @@ export function buildPrivateLabelMetadata(locale: Locale): Metadata {
   return buildPageMetadata(locale, "private-label", path, {
     en: "/en/private-label",
     fr: "/fr/private-label",
+    ar: "/ar/private-label",
     "x-default": "/en/private-label",
   });
 }
@@ -46,17 +51,18 @@ export function buildBlogIndexMetadata(locale: Locale): Metadata {
     title: { absolute: ui.indexSeoTitle },
     description: ui.indexMetaDescription,
     alternates: {
-      canonical: path,
+      canonical: absoluteUrl(path),
       languages: {
-        en: "/en/blog",
-        fr: "/fr/blog",
-        "x-default": "/en/blog",
+        en: absoluteUrl("/en/blog"),
+        fr: absoluteUrl("/fr/blog"),
+        ar: absoluteUrl("/ar/blog"),
+        "x-default": absoluteUrl("/en/blog"),
       },
     },
     openGraph: {
       title: ui.indexSeoTitle,
       description: ui.indexMetaDescription,
-      url: path,
+      url: absoluteUrl(path),
       locale: localeOpenGraph(locale),
     },
     twitter: {
@@ -71,6 +77,7 @@ export function buildContactMetadata(locale: Locale): Metadata {
   return buildPageMetadata(locale, "contact", path, {
     en: "/en/contact",
     fr: "/fr/contact",
+    ar: "/ar/contact",
     "x-default": "/en/contact",
   });
 }
@@ -83,17 +90,18 @@ export function buildBlogPostMetadata(locale: Locale, slug: string): Metadata {
     title: seo_title,
     description: meta_description,
     alternates: {
-      canonical: path,
+      canonical: absoluteUrl(path),
       languages: {
-        en: blogPostPath("en", slug),
-        fr: blogPostPath("fr", slug),
-        "x-default": blogPostPath("en", slug),
+        en: absoluteUrl(blogPostPath("en", slug)),
+        fr: absoluteUrl(blogPostPath("fr", slug)),
+        ar: absoluteUrl(blogPostPath("ar", slug)),
+        "x-default": absoluteUrl(blogPostPath("en", slug)),
       },
     },
     openGraph: {
       title: seo_title,
       description: meta_description,
-      url: path,
+      url: absoluteUrl(path),
       type: "article",
       publishedTime: date,
       locale: localeOpenGraph(locale),
