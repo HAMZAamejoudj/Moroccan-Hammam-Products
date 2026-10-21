@@ -4,6 +4,7 @@ import { Footer } from "@/components/layout/Footer";
 import { WhatsAppFloat } from "@/components/layout/WhatsAppFloat";
 import { getSiteConfig } from "@/lib/site-config";
 import { JsonLd, organizationSchema } from "@/lib/schema";
+import { StripExtensionHydrationAttrs } from "@/components/i18n/SyncDocumentLocale";
 import { localeDirection, type Locale } from "@/lib/i18n/config";
 
 export function SiteShell({
@@ -21,6 +22,7 @@ export function SiteShell({
   return (
     <html lang={locale} dir={dir} suppressHydrationWarning>
       <body suppressHydrationWarning className={bodyClassName}>
+        <StripExtensionHydrationAttrs />
         <JsonLd data={organizationSchema(config)} />
         <Suspense fallback={null}>
           <Header brandName={config.brand_name} />

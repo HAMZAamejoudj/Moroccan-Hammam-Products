@@ -41,7 +41,7 @@ export function Footer({ config }: { config: FooterConfig }) {
       lang={activeLocale}
     >
       <MoroccanPattern className="pointer-events-none absolute right-4 top-4 h-24 w-24 text-gold opacity-40" />
-      <div className="mx-auto max-w-6xl px-4 pb-10">
+      <div suppressHydrationWarning className="mx-auto max-w-6xl px-4 pb-10">
         <Link href={homePath(activeLocale)} className="inline-block">
           <Image
             src={siteLogo.src}
@@ -52,12 +52,12 @@ export function Footer({ config }: { config: FooterConfig }) {
           />
         </Link>
       </div>
-      <div className="mx-auto grid max-w-6xl gap-10 px-4 md:grid-cols-2 lg:grid-cols-4">
-        <div>
+      <div suppressHydrationWarning className="mx-auto grid max-w-6xl gap-10 px-4 md:grid-cols-2 lg:grid-cols-4">
+        <div suppressHydrationWarning>
           <h2 className="font-serif text-lg text-ink">{ui.aboutHeading}</h2>
           <p className="mt-3 text-sm leading-relaxed text-ink/80">{ui.aboutBlurb}</p>
         </div>
-        <div>
+        <div suppressHydrationWarning>
           <h2 className="font-serif text-lg text-ink">{ui.productsHeading}</h2>
           <ul className="mt-3 space-y-1 text-sm">
             {ui.products.map((p) => (
@@ -72,7 +72,7 @@ export function Footer({ config }: { config: FooterConfig }) {
             ))}
           </ul>
         </div>
-        <div>
+        <div suppressHydrationWarning>
           <h2 className="font-serif text-lg text-ink">{ui.companyHeading}</h2>
           <ul className="mt-3 space-y-1 text-sm">
             {nav.map((n) => (
@@ -84,7 +84,7 @@ export function Footer({ config }: { config: FooterConfig }) {
             ))}
           </ul>
         </div>
-        <div>
+        <div suppressHydrationWarning>
           <h2 className="font-serif text-lg text-ink">{ui.contactHeading}</h2>
           <ul className="mt-3 space-y-2 text-sm text-ink/80">
             <li>
@@ -102,7 +102,7 @@ export function Footer({ config }: { config: FooterConfig }) {
           </ul>
         </div>
       </div>
-      <div className="mx-auto mt-12 max-w-6xl border-t border-gold/20 px-4 pt-6 text-xs text-ink/70">
+      <div suppressHydrationWarning className="mx-auto mt-12 max-w-6xl border-t border-gold/20 px-4 pt-6 text-xs text-ink/70">
         <p>
           © {year} {config.brand_name}. {ui.rightsReserved}
         </p>

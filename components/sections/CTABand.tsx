@@ -21,10 +21,10 @@ export function CTABand({
 }) {
   return (
     <section className="relative overflow-hidden bg-primary py-16 text-cream md:py-20">
-      <div className="pointer-events-none absolute inset-0 opacity-[0.07]">
-        <div className="absolute -right-20 top-0 h-64 w-64 rounded-full bg-gold blur-3xl" />
+      <div suppressHydrationWarning className="pointer-events-none absolute inset-0 opacity-[0.07]">
+        <div suppressHydrationWarning className="absolute -right-20 top-0 h-64 w-64 rounded-full bg-gold blur-3xl" />
       </div>
-      <div className="relative mx-auto max-w-3xl px-4 text-center">
+      <div suppressHydrationWarning className="relative mx-auto max-w-3xl px-4 text-center">
         {title ? (
           <h2 className="font-serif text-3xl md:text-4xl">{title}</h2>
         ) : null}
@@ -34,6 +34,7 @@ export function CTABand({
           </p>
         ) : null}
         <div
+          suppressHydrationWarning
           className={cn(
             "flex flex-wrap items-center justify-center gap-3",
             title || body ? "mt-8" : "",

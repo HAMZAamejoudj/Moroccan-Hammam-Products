@@ -38,7 +38,10 @@ export function Header({ brandName }: { brandName: string }) {
           : "border-gold/15 bg-cream/90 shadow-sm backdrop-blur-md",
       )}
     >
-      <div className="mx-auto grid max-w-7xl grid-cols-[auto_1fr_auto] items-center gap-3 px-4 py-3 md:grid-cols-[minmax(0,1fr)_auto_minmax(0,1fr)] md:gap-6 md:py-3.5">
+      <div
+        suppressHydrationWarning
+        className="mx-auto grid max-w-7xl grid-cols-[auto_1fr_auto] items-center gap-3 px-4 py-3 md:grid-cols-[minmax(0,1fr)_auto_minmax(0,1fr)] md:gap-6 md:py-3.5"
+      >
         <Link
           href={homePath(activeLocale)}
           className="flex shrink-0 items-center justify-self-start focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary"
@@ -68,7 +71,7 @@ export function Header({ brandName }: { brandName: string }) {
           ))}
         </nav>
 
-        <div className="flex items-center justify-self-end gap-2">
+        <div suppressHydrationWarning className="flex items-center justify-self-end gap-2">
           <LocaleSwitcher className="hidden sm:flex" />
           <Button
             href="/contact"
@@ -94,6 +97,7 @@ export function Header({ brandName }: { brandName: string }) {
       <div
         id="mobile-nav"
         hidden={!open}
+        suppressHydrationWarning
         className="border-t border-gold/20 bg-cream px-4 pb-4 md:hidden"
       >
         <ul className="flex flex-col gap-2 pt-2">
