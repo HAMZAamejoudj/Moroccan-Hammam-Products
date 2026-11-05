@@ -20,6 +20,8 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   return buildBlogIndexMetadata(raw as Locale);
 }
 
+export const instant = false;
+
 export default async function BlogIndexPage({ params }: Props) {
   const { locale: raw } = await params;
   if (!isLocale(raw)) notFound();
@@ -46,7 +48,7 @@ export default async function BlogIndexPage({ params }: Props) {
               { label: nav.blog },
             ]}
           />
-          <h1 className="font-serif text-4xl text-ink md:text-5xl">{ui.indexH1}</h1>
+          <h1 className="font-serif text-4xl font-bold tracking-tight text-ink md:text-5xl">{ui.indexH1}</h1>
           <p className="mt-4 max-w-2xl text-ink/80">{ui.indexIntro}</p>
           <div className="mt-12 grid gap-8 md:grid-cols-2 lg:grid-cols-3">
             {posts.map((post) => (

@@ -26,7 +26,7 @@ export function CTABand({
       </div>
       <div suppressHydrationWarning className="relative mx-auto max-w-3xl px-4 text-center">
         {title ? (
-          <h2 className="font-serif text-3xl md:text-4xl">{title}</h2>
+          <h2 className="font-serif text-3xl font-bold md:text-4xl">{title}</h2>
         ) : null}
         {body ? (
           <p className={cn("text-base leading-relaxed text-cream/90", title ? "mt-4" : "")}>

@@ -43,6 +43,8 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   return buildBlogPostMetadata(locale, slug);
 }
 
+export const instant = false;
+
 export default async function BlogPostPage({ params }: Props) {
   const { locale: raw, slug } = await params;
   if (!isLocale(raw)) notFound();

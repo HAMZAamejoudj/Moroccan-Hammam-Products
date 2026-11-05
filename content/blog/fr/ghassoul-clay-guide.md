@@ -4,7 +4,7 @@ seo_title: "Ghassoul en gros : qualités, usages et préparation"
 meta_description: "Ghassoul ou rhassoul ? Origine de l'argile marocaine, critères de qualité, préparation pour le corps, le visage et les cheveux, et questions à poser à un fournisseur en vrac."
 main_keyword: "ghassoul clay wholesale"
 category: "Guides produits"
-author: "Équipe Moroccan Hammam Products, Agadir"
+author: "Équipe Moroccan Hammam Products, Marrakech"
 date: "2026-10-08"
 reading_time: "6 min"
 schema: ["Article", "HowTo", "FAQPage"]

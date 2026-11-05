@@ -8,7 +8,7 @@ schema: ["Service", "HowTo", "FAQPage"]
 
 # Private Label Hammam Products, Made in Morocco Under Your Brand
 
-You bring the brand. We bring the black soap, the clay, the gloves and the know-how. Your products are made, filled and labeled in Agadir, Morocco, then shipped to you ready to sell.
+You bring the brand. We bring the black soap, the clay, the gloves and the know-how. Your products are made, filled and labeled in Marrakech, Morocco, then shipped to you ready to sell.
 
 Buttons: [Start your project → /contact] [Request the catalog → /contact]
 
@@ -54,7 +54,7 @@ Buttons: [Start your project → /contact] [Request the catalog → /contact]
 
 ## [labels] Labels and compliance
 
-Your label must meet the rules of the country you sell in. For the EU, that means an EU Responsible Person, INCI list, batch number, net weight and period-after-opening symbol. For the US, FDA cosmetic labeling rules apply. We supply the INCI list and product data from Agadir; you or your Responsible Person confirm final compliance.
+Your label must meet the rules of the country you sell in. For the EU, that means an EU Responsible Person, INCI list, batch number, net weight and period-after-opening symbol. For the US, FDA cosmetic labeling rules apply. We supply the INCI list and product data from Marrakech; you or your Responsible Person confirm final compliance.
 
 ## [mistakes] Mistakes to avoid
 

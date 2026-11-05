@@ -4,7 +4,7 @@ seo_title: "Moroccan Hammam Treatment Steps: A Spa Protocol That Works"
 meta_description: "A step-by-step Moroccan hammam protocol for spas: timings, product amounts per client, therapist tips, and the mistakes that make clients not come back."
 main_keyword: "moroccan hammam treatment steps"
 category: "Spa guides"
-author: "Moroccan Hammam Products team, Agadir"
+author: "Moroccan Hammam Products team, Marrakech"
 date: "2026-10-08"
 reading_time: "8 min"
 schema: ["Article", "HowTo", "FAQPage"]

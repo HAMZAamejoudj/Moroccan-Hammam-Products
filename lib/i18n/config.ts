@@ -40,6 +40,14 @@ export function blogPostPath(locale: Locale, slug: string): string {
   return `/${locale}/blog/${slug.replace(/^\//, "")}`;
 }
 
+export function productsPath(locale: Locale): string {
+  return `/${locale}/products`;
+}
+
+export function productPath(locale: Locale, slug: string): string {
+  return `/${locale}/products/${slug.replace(/^\//, "")}`;
+}
+
 export function pathWithLocale(pathname: string, locale: Locale): string {
   const stripped = pathname.replace(/^\/(en|fr|ar)(?=\/|$)/, "") || "/";
   if (stripped === "/" || stripped === "") return homePath(locale);

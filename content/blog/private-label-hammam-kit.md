@@ -4,7 +4,7 @@ seo_title: "Private Label Hammam Kit: How to Launch One in 6 Weeks"
 meta_description: "Plan a private label Moroccan hammam kit: which products to include, packaging choices, label rules, pricing math, and launch mistakes to avoid."
 main_keyword: "private label hammam kit"
 category: "Private label"
-author: "Moroccan Hammam Products team, Agadir"
+author: "Moroccan Hammam Products team, Marrakech"
 date: "2026-10-08"
 reading_time: "7 min"
 schema: ["Article", "HowTo", "FAQPage"]

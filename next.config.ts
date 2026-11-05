@@ -21,6 +21,8 @@ const nextConfig: NextConfig = {
       { source: "/about", destination: "/en/about", permanent: true },
       { source: "/benefits", destination: "/en/benefits", permanent: true },
       { source: "/private-label", destination: "/en/private-label", permanent: true },
+      { source: "/products", destination: "/en/products", permanent: true },
+      { source: "/products/:slug", destination: "/en/products/:slug", permanent: true },
       { source: "/index.html", destination: "/en", permanent: true },
       { source: "/about.html", destination: "/en/about", permanent: true },
       { source: "/case-study.html", destination: "/en", permanent: true },
@@ -31,6 +33,8 @@ const nextConfig: NextConfig = {
       { source: "/blog/:slug", destination: "/en/blog/:slug", permanent: true },
       { source: "/contact.html", destination: "/en/contact", permanent: true },
       { source: "/contact", destination: "/en/contact", permanent: true },
+      { source: "/sitemap.html", destination: "/en/sitemap", permanent: true },
+      { source: "/sitemap", destination: "/en/sitemap", permanent: true },
       { source: "/attorney.html", destination: "/en/contact", permanent: true },
     ];
   },

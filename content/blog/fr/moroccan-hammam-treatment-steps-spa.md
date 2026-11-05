@@ -4,7 +4,7 @@ seo_title: "Étapes du hammam marocain : protocole spa efficace"
 meta_description: "Protocole hammam marocain pas à pas pour spas : durées, quantités de produits par client, conseils thérapeutes et erreurs qui font ne pas revenir."
 main_keyword: "moroccan hammam treatment steps"
 category: "Guides spa"
-author: "Équipe Moroccan Hammam Products, Agadir"
+author: "Équipe Moroccan Hammam Products, Marrakech"
 date: "2026-10-08"
 reading_time: "8 min"
 schema: ["Article", "HowTo", "FAQPage"]

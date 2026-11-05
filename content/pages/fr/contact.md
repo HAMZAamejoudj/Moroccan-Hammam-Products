@@ -1,14 +1,14 @@
 ---
 url: "/fr/contact"
 seo_title: "Contact | Devis gros produits hammam et échantillons"
-meta_description: "Demandez un devis ou des échantillons : savon noir, ghassoul, kessa, huile d'argan. Réponse sous 48 h par e-mail ou WhatsApp depuis Agadir."
+meta_description: "Demandez un devis ou des échantillons : savon noir, ghassoul, kessa, huile d'argan. Réponse sous 48 h par e-mail ou WhatsApp depuis Marrakech."
 main_keyword: "devis produits hammam gros"
 schema: ["ContactPage", "LocalBusiness", "ContactPoint", "FAQPage"]
 ---
 
 # Demander un devis pour des produits hammam marocains
 
-Dites-nous ce dont vous avez besoin et la destination. Tarifs, MOQ et délais sous 48 h, par une personne de notre équipe à Agadir.
+Dites-nous ce dont vous avez besoin et la destination. Tarifs, MOQ et délais sous 48 h, par une personne de notre équipe à Marrakech.
 
 ## [tips] Conseils pour un devis plus rapide et précis
 
@@ -19,7 +19,7 @@ Dites-nous ce dont vous avez besoin et la destination. Tarifs, MOQ et délais so
 
 ## [visit] Nous rendre visite
 
-Les acheteurs peuvent visiter notre atelier à Agadir sur rendez-vous. Aéroport le plus proche : Agadir Al Massira (AGA), environ 30 minutes en voiture.
+Les acheteurs peuvent visiter notre atelier à Marrakech sur rendez-vous. Aéroport le plus proche : Marrakech Ménara (RAK), environ 20 minutes en voiture.
 
 ## [faq] FAQ
 

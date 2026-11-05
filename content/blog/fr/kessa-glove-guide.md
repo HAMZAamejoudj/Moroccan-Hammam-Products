@@ -4,7 +4,7 @@ seo_title: "Gant kessa en gros : tissus, qualités et entretien"
 meta_description: "Comment choisir des gants kessa marocains pour un spa ou une boutique : grades de tissu, tailles, durée de vie, nettoyage, et ce qui fait échouer un gant bon marché."
 main_keyword: "kessa glove wholesale"
 category: "Guides produits"
-author: "Équipe Moroccan Hammam Products, Agadir"
+author: "Équipe Moroccan Hammam Products, Marrakech"
 date: "2026-10-08"
 reading_time: "5 min"
 schema: ["Article", "FAQPage"]

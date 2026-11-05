@@ -8,7 +8,7 @@ schema: ["Service", "HowTo", "FAQPage"]
 
 # Produits hammam en marque blanche, fabriqués au Maroc sous votre marque
 
-Vous apportez la marque. Nous apportons le savon noir, l’argile, les gants et le savoir-faire. Vos produits sont fabriqués, remplis et étiquetés à Agadir, puis expédiés prêts à vendre.
+Vous apportez la marque. Nous apportons le savon noir, l’argile, les gants et le savoir-faire. Vos produits sont fabriqués, remplis et étiquetés à Marrakech, puis expédiés prêts à vendre.
 
 Buttons: [Lancer votre projet → /contact] [Demander le catalogue → /contact]
 
@@ -54,7 +54,7 @@ Buttons: [Lancer votre projet → /contact] [Demander le catalogue → /contact]
 
 ## [labels] Étiquettes et conformité
 
-L’étiquette doit respecter le pays de vente. Pour l’UE : Personne Responsable UE, INCI, numéro de lot, poids net, symbole PAO. Pour les USA : règles FDA cosmétiques. Nous fournissons INCI et données produit depuis Agadir ; vous ou votre PR validez la conformité finale.
+L’étiquette doit respecter le pays de vente. Pour l’UE : Personne Responsable UE, INCI, numéro de lot, poids net, symbole PAO. Pour les USA : règles FDA cosmétiques. Nous fournissons INCI et données produit depuis Marrakech ; vous ou votre PR validez la conformité finale.
 
 ## [mistakes] Erreurs à éviter
 

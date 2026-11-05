@@ -22,18 +22,39 @@
   --color-gold: var(--gold);
   --color-background: var(--background);
   --color-foreground: var(--foreground);
-  --font-sans: var(--font-manrope);
-  --font-serif: var(--font-cormorant);
+  --font-sans: var(--font-manrope), system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  --font-serif: var(--font-manrope), system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
 }
 
 body {
   background: #ffffff;
   color: var(--ink);
-  font-family: var(--font-manrope), system-ui, sans-serif;
+  font-family: var(--font-manrope), system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 
 main {
   background: #ffffff;
+}
+
+/* Base headings: clean, straight, modern, and bold across the entire site */
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-manrope), system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  font-weight: 800;
+  letter-spacing: -0.025em;
+  color: var(--ink);
+}
+
+html[dir="rtl"] body,
+html[dir="rtl"] h1,
+html[dir="rtl"] h2,
+html[dir="rtl"] h3,
+html[dir="rtl"] h4,
+html[dir="rtl"] h5,
+html[dir="rtl"] h6 {
+  font-family: var(--font-arabic), system-ui, sans-serif;
+  font-weight: 700;
 }
 
 .placeholder {
@@ -54,16 +75,18 @@ main {
 .prose-hammam h2 {
   scroll-margin-top: 6rem;
   margin-top: 2.5rem;
-  font-family: var(--font-cormorant), Georgia, serif;
-  font-size: 1.75rem;
+  font-family: var(--font-playfair), Georgia, serif;
+  font-weight: 700;
+  font-size: 1.85rem;
   line-height: 1.25;
   color: var(--ink);
 }
 
 .prose-hammam h3 {
   margin-top: 1.75rem;
-  font-family: var(--font-cormorant), Georgia, serif;
-  font-size: 1.35rem;
+  font-family: var(--font-playfair), Georgia, serif;
+  font-weight: 700;
+  font-size: 1.4rem;
   color: var(--ink);
 }
 
@@ -71,7 +94,7 @@ main {
 .prose-hammam li {
   margin-top: 0.75rem;
   line-height: 1.7;
-  color: color-mix(in srgb, var(--ink) 88%, transparent);
+  color: color-mix(in srgb, var(--ink) 92%, transparent);
 }
 
 .prose-hammam ul,

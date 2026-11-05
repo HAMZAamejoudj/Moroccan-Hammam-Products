@@ -1,6 +1,6 @@
 ---
 url: "/fr"
-seo_title: "Produits Hammam Marocains en Gros | Spa & Marque Blanche"
+seo_title: "Produits Hammam Marocains en Gros | Spa et Marque Blanche"
 meta_description: "Vente en gros de produits hammam marocains fabriqués au Maroc : savon noir, ghassoul, gants kessa, huile d'argan. Approvisionnement bulk et marque blanche pour spas et marques."
 main_keyword: "produits hammam marocains gros"
 schema: ["Organization", "WebSite", "FAQPage", "ItemList"]
@@ -30,8 +30,8 @@ Le gant qui rend le hammam efficace. Deux textures : ferme pour les professionne
 ### Huile d'argan et huile de figue de barbarie
 Huiles pressées à froid pour le massage final. En vrac de 1 L à 200 L ou en flacons compte-gouttes prêts pour votre étiquette.
 
-### Eau de rose, fleur d'oranger, nila et aker fassi
-Les finitions : eaux florales pour tonifier, poudre de nila pour les masques éclat, aker fassi pour lèvres et joues.
+### Eau de rose marocaine pure
+Distillée artisanalement dans la Vallée des Roses (Kelaat M'Gouna). Une brume florale apaisante sans alcool pour tonifier, hydrater et resserrer les pores.
 
 ### Kits hammam (coffrets cadeaux)
 Savon noir, kessa et ghassoul dans une boîte ou un sachet. Populaires en spa, hôtellerie et retail ; aussi le moyen le plus simple de lancer une ligne [marque blanche](/private-label).
@@ -64,7 +64,7 @@ Button: [Découvrir la marque blanche → /private-label]
 - **Spécialistes hammam :** nous fabriquons ce que les Marocains utilisent vraiment au hammam, pas un catalogue beauté générique.
 - **Commandes mixtes :** savon, argile, gants et huiles dans une seule commande.
 - **Documents prêts :** COA, MSDS/SDS, liste INCI et certificat d'origine sur demande.
-- **Des interlocuteurs réels :** notre équipe commerciale à Agadir répond sur WhatsApp, pas via un ticket.
+- **Des interlocuteurs réels :** notre équipe commerciale à Marrakech répond sur WhatsApp, pas via un ticket.
 
 ## [faq] Questions fréquentes
 

@@ -4,7 +4,7 @@ seo_title: "Moroccan Black Soap Wholesale: How to Spot Real Quality"
 meta_description: "Not all beldi soap is equal. Learn how real Moroccan black soap is made, the 5 checks that reveal a cheap one, and which type suits spas or retail."
 main_keyword: "moroccan black soap wholesale"
 category: "Product guides"
-author: "Moroccan Hammam Products team, Agadir"
+author: "Moroccan Hammam Products team, Marrakech"
 date: "2026-10-08"
 reading_time: "6 min"
 schema: ["Article", "FAQPage"]

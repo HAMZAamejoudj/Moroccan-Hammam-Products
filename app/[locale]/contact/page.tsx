@@ -27,6 +27,8 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   return buildContactMetadata(raw as Locale);
 }
 
+export const instant = false;
+
 export default async function Page({ params }: Props) {
   const { locale: raw } = await params;
   if (!isLocale(raw)) notFound();

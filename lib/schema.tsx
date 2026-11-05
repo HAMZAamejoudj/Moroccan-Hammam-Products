@@ -13,8 +13,8 @@ export function organizationSchema(config: SiteConfig) {
     address: {
       "@type": "PostalAddress",
       streetAddress: config.office_address,
-      addressLocality: config.address_locality ?? "Agadir",
-      postalCode: config.postal_code ?? "80000",
+      addressLocality: config.address_locality ?? "Marrakech",
+      postalCode: config.postal_code ?? "40000",
       addressCountry: "MA",
     },
     contactPoint: {
@@ -119,6 +119,41 @@ export function serviceSchema() {
   };
 }
 
+export function productSchema(
+  product: {
+    h1: string;
+    meta_description: string;
+    images: { src: string }[];
+    slug: string;
+  },
+  url: string,
+) {
+  return {
+    "@context": "https://schema.org",
+    "@type": "Product",
+    name: product.h1,
+    description: product.meta_description,
+    image: product.images.map((img) => absoluteUrl(img.src)),
+    brand: {
+      "@type": "Brand",
+      name: "Moroccan Hammam Products",
+    },
+    offers: {
+      "@type": "AggregateOffer",
+      priceCurrency: "EUR",
+      offerCount: "100+",
+      availability: "https://schema.org/InStock",
+      priceValidUntil: "2027-12-31",
+      url: absoluteUrl(url),
+    },
+    category: "Moroccan Hammam and Spa Cosmetics",
+    countryOfOrigin: {
+      "@type": "Country",
+      name: "Morocco",
+    },
+  };
+}
+
 export function aboutPageSchema(headline: string) {
   return {
     "@context": "https://schema.org",
@@ -146,7 +181,7 @@ export function localBusinessSchema(config: SiteConfig) {
     address: {
       "@type": "PostalAddress",
       streetAddress: config.office_address,
-      addressLocality: config.address_locality ?? "Agadir",
+      addressLocality: config.address_locality ?? "Marrakech",
       addressCountry: "MA",
     },
     openingHours: config.hours,

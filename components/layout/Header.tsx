@@ -10,6 +10,7 @@ import { LocaleSwitcher } from "@/components/i18n/LocaleSwitcher";
 import { homePath, localeDirection } from "@/lib/i18n/config";
 import { useActiveLocale } from "@/components/i18n/useActiveLocale";
 import { getHomeUi, getNavItems, getNavLabels } from "@/lib/i18n/messages";
+import { Menu, X } from "lucide-react";
 
 export function Header({ brandName }: { brandName: string }) {
   const [solid, setSolid] = useState(false);
@@ -40,43 +41,45 @@ export function Header({ brandName }: { brandName: string }) {
     >
       <div
         suppressHydrationWarning
-        className="mx-auto grid max-w-7xl grid-cols-[auto_1fr_auto] items-center gap-3 px-4 py-3 md:grid-cols-[minmax(0,1fr)_auto_minmax(0,1fr)] md:gap-6 md:py-3.5"
+        className="mx-auto flex max-w-7xl items-center justify-between gap-4 px-4 py-3 md:gap-6 md:py-3.5"
       >
-        <Link
-          href={homePath(activeLocale)}
-          className="flex shrink-0 items-center justify-self-start focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary"
-        >
-          <Image
-            src={siteLogo.src}
-            alt={`${brandName} — ${siteLogo.alt}`}
-            width={siteLogo.width}
-            height={siteLogo.height}
-            className="h-11 w-auto max-w-[200px] object-contain object-left md:h-12 md:max-w-[240px]"
-            priority
-          />
-        </Link>
+        <div className="flex flex-1 items-center justify-start">
+          <Link
+            href={homePath(activeLocale)}
+            className="flex shrink-0 items-center focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary"
+          >
+            <Image
+              src={siteLogo.src}
+              alt={`${brandName} — ${siteLogo.alt}`}
+              width={siteLogo.width}
+              height={siteLogo.height}
+              className="h-11 w-auto max-w-[200px] object-contain object-left rtl:object-right md:h-12 md:max-w-[240px]"
+              priority
+            />
+          </Link>
+        </div>
 
         <nav
-          className="hidden items-center justify-center gap-5 md:flex lg:gap-7"
+          className="hidden items-center justify-center gap-6 md:flex lg:gap-8"
           aria-label={navAria}
         >
           {nav.map((item) => (
             <Link
               key={item.href}
               href={item.href}
-              className="whitespace-nowrap text-sm font-medium text-ink hover:text-primary focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary"
+              className="whitespace-nowrap text-sm font-bold tracking-wide text-ink transition-colors hover:text-primary focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary"
             >
               {item.label}
             </Link>
           ))}
         </nav>
 
-        <div suppressHydrationWarning className="flex items-center justify-self-end gap-2">
+        <div suppressHydrationWarning className="flex flex-1 items-center justify-end gap-3">
           <LocaleSwitcher className="hidden sm:flex" />
           <Button
             href="/contact"
             variant="primary"
-            className="hidden md:inline-flex"
+            className="hidden font-bold md:inline-flex"
           >
             {ui.headerRequestQuote}
           </Button>
@@ -88,8 +91,8 @@ export function Header({ brandName }: { brandName: string }) {
             onClick={() => setOpen((v) => !v)}
           >
             <span className="sr-only">{ui.menu}</span>
-            <span aria-hidden className="text-lg leading-none">
-              {open ? "×" : "☰"}
+            <span aria-hidden className="flex items-center justify-center">
+              {open ? <X className="h-5 w-5" /> : <Menu className="h-5 w-5" />}
             </span>
           </button>
         </div>
@@ -108,7 +111,7 @@ export function Header({ brandName }: { brandName: string }) {
             <li key={item.href}>
               <Link
                 href={item.href}
-                className="block py-2 text-sm font-medium text-ink"
+                className="block py-2 text-sm font-bold text-ink"
                 onClick={() => setOpen(false)}
               >
                 {item.label}

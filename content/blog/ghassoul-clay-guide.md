@@ -4,7 +4,7 @@ seo_title: "Ghassoul Clay Wholesale: Rhassoul Grades, Uses and Prep"
 meta_description: "Ghassoul or rhassoul? Where Moroccan clay comes from, how to judge its quality, how to mix it for body, face and hair, and what to ask a bulk supplier."
 main_keyword: "ghassoul clay wholesale"
 category: "Product guides"
-author: "Moroccan Hammam Products team, Agadir"
+author: "Moroccan Hammam Products team, Marrakech"
 date: "2026-10-08"
 reading_time: "6 min"
 schema: ["Article", "HowTo", "FAQPage"]

@@ -40,36 +40,36 @@ export const siteImages = {
     alt: "Wholesale prickly pear, cypress and argan oils and rose water from Morocco",
   },
   fourJars: {
-    src: "/images/products/product-07.webp",
+    src: "/images/products/product-08.webp",
     alt: "Nila mask, argan cream, black soap with rose and ghassoul powder in jars",
   },
   bulkPowders: {
-    src: "/images/products/product-08.webp",
+    src: "/images/products/product-10.webp",
     alt: "Five kilogram blocks of nila powder and aker fassi powder for wholesale",
   },
   arganPress: {
     src: "/images/products/product-09.webp",
-    alt: "Cold-pressed argan oil bottles beside traditional Moroccan press mats",
+    alt: "Hammam ritual display with black soap, ghassoul clay, argan oil and tbrima",
   },
   productionLine: {
-    src: "/images/products/product-10.webp",
-    alt: "Moroccan hammam production line with bulk black soap, ghassoul and scrubs",
+    src: "/images/products/product-04.webp",
+    alt: "Beldi soap, ghassoul mask, tebrima and nila masks arranged as a product display",
   },
   harvestLine: {
     src: "/images/products/product-11.webp",
-    alt: "Moroccan harvest organic skincare line with kessa glove, oils and floral waters",
+    alt: "Moroccan hammam gift set with beldi soap, ghassoul mask, tebrima and nila mask",
   },
   bulkSupply: {
     src: "/images/products/product-12.webp",
     alt: "Wholesale ghassoul powder, black soap, argan oil and rose water spray bottles",
   },
   kessaRetail: {
-    src: "/images/products/product-13.webp",
-    alt: "SAHARA GLOW kessa exfoliating glove in retail packaging",
+    src: "/images/products/product-07.webp",
+    alt: "SAHARA GLOW authentic kessa exfoliating glove in retail packaging",
   },
   arganBottles: {
-    src: "/images/products/product-14.webp",
-    alt: "Moroccan argan oil in 250 ml wholesale bottles",
+    src: "/images/products/product-20.webp",
+    alt: "Moroccan pure cold-pressed argan oil in 250 ml wholesale bottles",
   },
   argamaraLine: {
     src: "/images/products/product-15.webp",
@@ -172,11 +172,11 @@ export const benefitProductImages: Record<string, BenefitImage> = {
 export const homeProductCardImages: { src: string; alt: string }[] = [
   {
     src: "/images/benefits/black-soap.webp",
-    alt: "Moroccan black soap (savon beldi) in a traditional brass bowl",
+    alt: "Moroccan black soap in a traditional brass bowl",
   },
   {
     src: "/images/benefits/ghassoul.webp",
-    alt: "Ghassoul (rhassoul) clay powder and raw clay chunks",
+    alt: "Moroccan ghassoul clay powder and raw clay chunks",
   },
   {
     src: "/images/benefits/kessa.webp",
@@ -188,7 +188,7 @@ export const homeProductCardImages: { src: string; alt: string }[] = [
   },
   {
     src: "/images/benefits/rose-water.webp",
-    alt: "Rose water and orange blossom water with nila and aker fassi ingredients",
+    alt: "Pure Moroccan rose water in a glass bottle with fresh pink rose petals",
   },
   {
     src: "/images/products/product-11.webp",

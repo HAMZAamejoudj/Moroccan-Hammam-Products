@@ -21,7 +21,7 @@ export function FAQ({
       lang={locale}
     >
       <div className="mx-auto max-w-3xl px-4">
-        <h2 id="faq-heading" className="font-serif text-3xl text-ink md:text-4xl">
+        <h2 id="faq-heading" className="font-serif text-3xl font-bold text-ink md:text-4xl">
           {title}
         </h2>
         <div className="mt-10 divide-y divide-gold/15">
@@ -39,7 +39,7 @@ function FaqRow({ item, locale }: { item: FaqItem; locale: Locale }) {
     <details className="group py-5">
       <summary
         className={cn(
-          "flex cursor-pointer list-none items-start justify-between gap-4 text-start text-base font-medium text-ink",
+          "flex cursor-pointer list-none items-start justify-between gap-4 text-start text-base font-semibold text-ink md:text-lg",
           "focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary",
           "[&::-webkit-details-marker]:hidden",
         )}

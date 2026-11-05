@@ -1,24 +1,24 @@
 ---
 url: "/fr/about"
-seo_title: "À propos | Fabricant de produits hammam marocains, Agadir"
-meta_description: "Fabricant hammam marocain à Agadir : savon noir, ghassoul et gants kessa pour spas et marques dans le monde. Contrôle qualité et documents export."
+seo_title: "À propos | Fabricant de produits hammam marocains, Marrakech"
+meta_description: "Fabricant hammam marocain à Marrakech : savon noir, ghassoul et gants kessa pour spas et marques dans le monde. Contrôle qualité et documents export."
 main_keyword: "fabricant produits hammam maroc"
 schema: ["AboutPage", "Organization", "Person"]
 ---
 
 # Nous fabriquons les produits que les Marocains utilisent au hammam
 
-Au Maroc, le hammam n’est pas un soin spa. C’est une habitude hebdomadaire, avec les mêmes produits depuis des siècles : savon noir, gant kessa, ghassoul et un peu d’huile à la fin. Nous avons grandi avec ces produits. Aujourd’hui nous les fabriquons à Agadir pour les spas, boutiques et marques en Europe, dans le Golfe, en Amérique du Nord et ailleurs.
+Au Maroc, le hammam n’est pas un soin spa. C’est une habitude hebdomadaire, avec les mêmes produits depuis des siècles : savon noir, gant kessa, ghassoul et un peu d’huile à la fin. Nous avons grandi avec ces produits. Aujourd’hui nous les fabriquons à Marrakech pour les spas, boutiques et marques en Europe, dans le Golfe, en Amérique du Nord et ailleurs.
 
 ## [story] Notre histoire
 
-Moroccan Hammam Products est née à Agadir pour offrir aux acheteurs internationaux une source fiable pour tout le rituel hammam. Les premiers clients export voulaient un savon noir identique d’un lot à l’autre : aspect, odeur et performance. Nous avons bâti notre processus sur cette constance : recettes fixes, savon affiné, numéros de lot et échantillons conservés à chaque production.
+Moroccan Hammam Products est née à Marrakech pour offrir aux acheteurs internationaux une source fiable pour tout le rituel hammam. Les premiers clients export voulaient un savon noir identique d’un lot à l’autre : aspect, odeur et performance. Nous avons bâti notre processus sur cette constance : recettes fixes, savon affiné, numéros de lot et échantillons conservés à chaque production.
 
-La plupart des échanges commencent sur WhatsApp ou par e-mail avec notre équipe commerciale à Agadir, qui suit votre devis, vos échantillons et votre expédition jusqu’à la livraison.
+La plupart des échanges commencent sur WhatsApp ou par e-mail avec notre équipe commerciale à Marrakech, qui suit votre devis, vos échantillons et votre expédition jusqu’à la livraison.
 
 ## [origins] D’où viennent nos produits
 
-- **Savon noir :** fabriqué dans notre atelier d’Agadir à partir d’huile d’olive, de pâte d’olive et de potasse, puis affiné plusieurs semaines avant conditionnement.
+- **Savon noir :** fabriqué dans notre atelier d’Marrakech à partir d’huile d’olive, de pâte d’olive et de potasse, puis affiné plusieurs semaines avant conditionnement.
 - **Ghassoul :** issu de mines autorisées du Moyen Atlas, lavé, séché au soleil et tamisé.
 - **Gants kessa :** tissés par des ateliers partenaires au Maroc, textures ferme et douce pour spa et retail.
 - **Huiles d’argan et de figue de barbarie :** pressées à froid dans la région du Souss, auprès de coopératives féminines et de presses agréées.

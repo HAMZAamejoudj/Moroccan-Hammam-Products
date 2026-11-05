@@ -7,10 +7,10 @@ whatsapp: "+212 638-168637"
 phone: "06 38 16 86 37"
 email: "sales@moroccanhammamproducts.com"
 hours: "Mon to Sat, 9:00 to 18:00 (Morocco time)"
-office_address: "Agadir, Souss-Massa, Morocco"
-workshop_address: "Agadir, Souss-Massa, Morocco"
-address_locality: "Agadir"
-postal_code: "80000"
+office_address: "Marrakech, Morocco"
+workshop_address: "Marrakech, Morocco"
+address_locality: "Marrakech"
+postal_code: "40000"
 social:
   instagram: "[Instagram URL]"
   facebook: "[Facebook URL]"
@@ -59,7 +59,7 @@ WhatsApp button on every page (bottom right), linking to `https://wa.me/[number 
 - Office address
 - Hours
 
-**Bottom bar:** © [current year] [Brand name]. All rights reserved. · Privacy Policy · Terms & Conditions
+**Bottom bar:** © [current year] [Brand name]. All rights reserved. · Privacy Policy · Terms and Conditions
 
 ## Sitewide schema (JSON-LD, in the root layout)
 

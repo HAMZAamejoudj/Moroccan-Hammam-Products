@@ -4,7 +4,7 @@ seo_title: "Sourcer des produits hammam marocains en gros (checklist)"
 meta_description: "Checklist pratique pour acheter savon noir, ghassoul et gants kessa marocains en vrac : questions au fournisseur, documents exigés et signaux d'alerte."
 main_keyword: "how to source moroccan hammam products"
 category: "Guides d'achat"
-author: "Équipe Moroccan Hammam Products, Agadir"
+author: "Équipe Moroccan Hammam Products, Marrakech"
 date: "2026-10-08"
 reading_time: "7 min"
 schema: ["Article", "FAQPage"]
