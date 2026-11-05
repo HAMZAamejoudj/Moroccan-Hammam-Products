@@ -74,8 +74,7 @@ export function getPage(name: string, locale?: Locale): PageContent {
   return readPage(name, locale);
 }
 
-/** Locale-scoped cache entry so partial prefetch does not reuse another language's body. */
-export async function getPageCached(
+async function getPageCachedProd(
   name: string,
   locale: Locale,
 ): Promise<PageContent> {
@@ -83,6 +82,17 @@ export async function getPageCached(
   cacheLife("max");
   cacheTag(`page:${name}:${locale}`);
   return readPage(name, locale);
+}
+
+/** Locale-scoped cache entry so partial prefetch does not reuse another language's body. */
+export async function getPageCached(
+  name: string,
+  locale: Locale,
+): Promise<PageContent> {
+  if (process.env.NODE_ENV === "development") {
+    return readPage(name, locale);
+  }
+  return getPageCachedProd(name, locale);
 }
 
 function listMarkdownSlugs(dir: string): string[] {

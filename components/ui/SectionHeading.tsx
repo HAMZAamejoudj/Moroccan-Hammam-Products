@@ -14,11 +14,11 @@ export function SectionHeading({
   return (
     <div className={cn("max-w-2xl", className)}>
       {eyebrow ? (
-        <p className="mb-2 text-xs font-semibold uppercase tracking-[0.2em] text-accent">
+        <p className="mb-2 text-xs font-bold uppercase tracking-[0.2em] text-accent">
           {eyebrow}
         </p>
       ) : null}
-      <Tag className="font-serif text-3xl leading-tight text-ink md:text-4xl">
+      <Tag className="font-serif text-3xl font-bold leading-tight text-ink md:text-4xl">
         {title}
       </Tag>
     </div>

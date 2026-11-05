@@ -4,7 +4,7 @@ seo_title: "Kessa Glove Wholesale Guide: Fabrics, Grades and Care"
 meta_description: "How to choose Moroccan kessa gloves for a spa or shop: fabric grades, sizes, how long they last, how to clean them, and what makes a cheap glove fail."
 main_keyword: "kessa glove wholesale"
 category: "Product guides"
-author: "Moroccan Hammam Products team, Agadir"
+author: "Moroccan Hammam Products team, Marrakech"
 date: "2026-10-08"
 reading_time: "5 min"
 schema: ["Article", "FAQPage"]

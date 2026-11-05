@@ -1,14 +1,14 @@
 ---
 url: "/en/contact"
-seo_title: "Contact Us | Wholesale Hammam Products Quote & Samples"
-meta_description: "Get a wholesale quote or samples of Moroccan black soap, ghassoul clay, kessa gloves and argan oil. Reply within 48 hours by email or WhatsApp from Agadir."
+seo_title: "Contact Us | Wholesale Hammam Products Quote and Samples"
+meta_description: "Get a wholesale quote or samples of Moroccan black soap, ghassoul clay, kessa gloves and argan oil. Reply within 48 hours by email or WhatsApp from Marrakech."
 main_keyword: "wholesale hammam products quote"
 schema: ["ContactPage", "LocalBusiness", "ContactPoint", "FAQPage"]
 ---
 
 # Get a Quote for Moroccan Hammam Products
 
-Tell us what you need and where it is going. You will get prices, MOQ and lead time within 48 hours, from a real person on our team in Agadir.
+Tell us what you need and where it is going. You will get prices, MOQ and lead time within 48 hours, from a real person on our team in Marrakech.
 
 ## [tips] Tips for a faster, more accurate quote
 
@@ -19,7 +19,7 @@ Tell us what you need and where it is going. You will get prices, MOQ and lead t
 
 ## [visit] Visit us
 
-Buyers are welcome to visit our Agadir workshop by appointment. Nearest airport: Agadir Al Massira (AGA), about 30 minutes by car.
+Buyers are welcome to visit our Marrakech workshop by appointment. Nearest airport: Marrakech Menara (RAK), about 20 minutes by car.
 
 ## [faq] FAQ
 

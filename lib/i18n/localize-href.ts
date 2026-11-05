@@ -6,6 +6,8 @@ import {
   isLocale,
   localeFromPathname,
   localePagePath,
+  productPath,
+  productsPath,
   type Locale,
 } from "./config";
 
@@ -15,6 +17,7 @@ export const localizedPageSegments = [
   "benefits",
   "private-label",
   "contact",
+  "products",
 ] as const;
 
 export type LocalizedPageSegment = (typeof localizedPageSegments)[number];
@@ -54,6 +57,15 @@ export function localizeHref(href: string, locale: Locale): string {
     return `${blogPostPath(locale, blogPost[1])}${suffix}`;
   }
 
+  if (pathOnly === "/products") {
+    return `${productsPath(locale)}${suffix}`;
+  }
+
+  const productMatch = pathOnly.match(/^\/products\/([^/]+)$/);
+  if (productMatch) {
+    return `${productPath(locale, productMatch[1])}${suffix}`;
+  }
+
   if (pathOnly === "/" || pathOnly === "") {
     return `${homePath(locale)}${suffix}`;
   }
@@ -61,7 +73,7 @@ export function localizeHref(href: string, locale: Locale): string {
   return href;
 }
 
-/** Keep the same page when switching language (/fr/benefits → /ar/benefits). */
+/** Keep the same page when switching language (/fr/benefits → /ar/benefits, /fr/products/slug → /ar/products/slug). */
 export function switchLocalePath(pathname: string, locale: Locale): string {
   const stripped = pathname.replace(/^\/(en|fr|ar)(?=\/|$)/, "") || "/";
 
@@ -75,6 +87,10 @@ export function switchLocalePath(pathname: string, locale: Locale): string {
   }
 
   if (stripped === "/blog" || stripped.startsWith("/blog/")) {
+    return `/${locale}${stripped}`;
+  }
+
+  if (stripped === "/products" || stripped.startsWith("/products/")) {
     return `/${locale}${stripped}`;
   }
 

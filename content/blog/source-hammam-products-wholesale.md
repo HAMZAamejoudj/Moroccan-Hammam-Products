@@ -4,7 +4,7 @@ seo_title: "How to Source Moroccan Hammam Products Wholesale (Checklist)"
 meta_description: "A practical checklist for buying Moroccan black soap, ghassoul and kessa gloves in bulk: what to ask suppliers, which documents to demand, and red flags."
 main_keyword: "how to source moroccan hammam products"
 category: "Buying guides"
-author: "Moroccan Hammam Products team, Agadir"
+author: "Moroccan Hammam Products team, Marrakech"
 date: "2026-10-08"
 reading_time: "7 min"
 schema: ["Article", "FAQPage"]

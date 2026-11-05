@@ -1,7 +1,7 @@
 ---
 url: "/en"
-seo_title: "Moroccan Hammam Products Wholesale | Spa & Private Label"
-meta_description: "Wholesale Moroccan hammam products made in Morocco: black soap, ghassoul clay, kessa gloves, argan oil. Bulk supply and private label for spas & brands."
+seo_title: "Moroccan Hammam Products Wholesale | Spa and Private Label"
+meta_description: "Wholesale Moroccan hammam products made in Morocco: black soap, ghassoul clay, kessa gloves, argan oil. Bulk supply and private label for spas and brands."
 main_keyword: "moroccan hammam products wholesale"
 schema: ["Organization", "WebSite", "FAQPage", "ItemList"]
 ---
@@ -18,10 +18,10 @@ Trust bar: Made in Morocco · Samples available · Export documents (COA, MSDS, 
 
 Most spas buy their black soap from one supplier, their clay from another and their gloves from a market stall. That is three sets of shipping costs and three quality levels. We supply the full ritual, so your products work together and arrive in one shipment.
 
-### Moroccan black soap (savon beldi)
+### Moroccan black soap
 Olive-based paste for the first step of the hammam. Available plain, with eucalyptus, with argan oil or with rose. Bulk tubs from 5 kg, retail jars from 200 g.
 
-### Ghassoul (rhassoul) clay
+### Moroccan ghassoul clay
 Mined in the Middle Atlas. Sold as fine powder or ready-to-use paste with rose water. Used for body wraps, face masks and hair washing.
 
 ### Kessa exfoliating gloves
@@ -30,8 +30,8 @@ The glove that makes the hammam work. Available in two fabric grades: firm for s
 ### Argan oil and prickly pear seed oil
 Cold-pressed oils for the final massage. Supplied in bulk from 1 L to 200 L or in dropper bottles ready for your label.
 
-### Rose water, orange blossom water, nila and aker fassi
-The finishing touches: floral waters to tone, nila powder for brightening masks, aker fassi for lips and cheeks.
+### Pure Moroccan rose water
+Hydro-distilled in the Valley of the Roses (Kalaat M'Gouna). A soothing, alcohol-free mist and toner that hydrates, refreshes and calms the skin.
 
 ### Hammam kits (gift sets)
 Black soap, kessa and ghassoul in one box or bag. Popular for spas, hotels and retail; also the easiest way to start a private label line.
@@ -64,7 +64,7 @@ Button: [Explore private label → /private-label]
 - **Hammam specialists:** we make the products Moroccans actually use in the hammam, not a generic beauty catalog.
 - **Mixed orders:** combine soap, clay, gloves and oils in one order.
 - **Documents ready:** COA, MSDS/SDS, INCI list and certificate of origin on request.
-- **Real people:** you talk to our sales team in Agadir directly on WhatsApp, not a ticket system.
+- **Real people:** you talk to our sales team in Marrakech directly on WhatsApp, not a ticket system.
 
 ## [faq] Frequently asked questions
 

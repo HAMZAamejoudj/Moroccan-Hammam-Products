@@ -88,8 +88,8 @@ export async function PrivateLabelPage({ locale }: { locale: Locale }) {
             { label: nav.privateLabel },
           ]}
         />
-        <h1 className="max-w-3xl font-serif text-4xl text-ink md:text-5xl">{page.h1}</h1>
-        <p className="mt-6 max-w-3xl text-lg leading-relaxed text-ink/85">
+        <h1 className="max-w-3xl font-serif text-4xl font-bold tracking-tight text-ink md:text-5xl">{page.h1}</h1>
+        <p className="mt-6 max-w-3xl text-lg leading-relaxed text-ink/90">
           <PlaceholderText text={privateLabelCopy(locale, intro)} />
         </p>
         <div className="mt-6 flex flex-wrap gap-3">
@@ -145,8 +145,8 @@ export async function PrivateLabelPage({ locale }: { locale: Locale }) {
           <SectionHeading title={why?.title ?? ""} className="max-w-none" />
           <ul className="mt-8 grid gap-5 md:grid-cols-2">
             {whyBullets.map(({ title, body }) => (
-              <li key={title} className="text-sm leading-relaxed text-ink/85 md:text-base">
-                <span className="font-medium text-ink">{title}.</span>{" "}
+              <li key={title} className="text-sm leading-relaxed text-ink/90 md:text-base">
+                <span className="font-bold text-ink">{title}.</span>{" "}
                 {unwrapBracketPlaceholders(body)}
               </li>
             ))}
@@ -177,7 +177,7 @@ export async function PrivateLabelPage({ locale }: { locale: Locale }) {
         <div className="mx-auto grid max-w-6xl items-center gap-10 px-4 md:grid-cols-2">
           <div>
             <SectionHeading title={moq?.title ?? ""} />
-            <div className="mt-4 space-y-3 text-sm leading-relaxed text-ink/85 md:text-base">
+            <div className="mt-4 space-y-3 text-sm leading-relaxed text-ink/90 md:text-base">
               {(moq?.body ?? "")
                 .split("\n")
                 .filter((l) => l.startsWith("- "))
@@ -195,7 +195,7 @@ export async function PrivateLabelPage({ locale }: { locale: Locale }) {
         <div className="mx-auto grid max-w-6xl items-start gap-10 px-4 md:grid-cols-2">
           <div>
             <SectionHeading title={packaging?.title ?? ""} />
-            <ul className="mt-4 list-disc space-y-2 pl-5 text-sm leading-relaxed text-ink/85 md:text-base">
+            <ul className="mt-4 list-disc space-y-2 pl-5 text-sm leading-relaxed text-ink/90 md:text-base">
               {(packaging?.body ?? "")
                 .split("\n")
                 .filter((l) => l.startsWith("- "))
@@ -215,7 +215,7 @@ export async function PrivateLabelPage({ locale }: { locale: Locale }) {
       <section className="bg-white py-14 md:py-20">
         <div className="mx-auto max-w-6xl px-4">
           <SectionHeading title={labels?.title ?? ""} className="max-w-none" />
-          <p className="mt-4 max-w-3xl text-sm leading-relaxed text-ink/85 md:text-base">
+          <p className="mt-4 max-w-3xl text-sm leading-relaxed text-ink/90 md:text-base">
             <PlaceholderText text={labels?.body ?? ""} />
           </p>
         </div>
@@ -226,8 +226,8 @@ export async function PrivateLabelPage({ locale }: { locale: Locale }) {
           <SectionHeading title={mistakes?.title ?? ""} className="max-w-none" />
           <ul className="mt-8 grid gap-5 md:grid-cols-2">
             {mistakeBullets.map(({ title, body }) => (
-              <li key={title} className="text-sm leading-relaxed text-ink/85 md:text-base">
-                <span className="font-medium text-ink">{title}.</span> {body}
+              <li key={title} className="text-sm leading-relaxed text-ink/90 md:text-base">
+                <span className="font-bold text-ink">{title}.</span> {body}
               </li>
             ))}
           </ul>

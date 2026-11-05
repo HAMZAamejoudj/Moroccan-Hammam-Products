@@ -4,7 +4,7 @@ seo_title: "Kit hammam marque blanche : lancer en 6 semaines"
 meta_description: "Planifier un kit hammam marocain en marque blanche : produits à inclure, emballages, règles d'étiquetage, calcul des prix et erreurs de lancement à éviter."
 main_keyword: "private label hammam kit"
 category: "Marque blanche"
-author: "Équipe Moroccan Hammam Products, Agadir"
+author: "Équipe Moroccan Hammam Products, Marrakech"
 date: "2026-10-08"
 reading_time: "7 min"
 schema: ["Article", "HowTo", "FAQPage"]

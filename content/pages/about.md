@@ -1,24 +1,24 @@
 ---
 url: "/about"
-seo_title: "About Us | Moroccan Hammam Products Manufacturer, Agadir"
-meta_description: "Moroccan hammam manufacturer based in Agadir: black soap, ghassoul clay and kessa gloves for spas and brands worldwide. Quality control and export documents."
+seo_title: "About Us | Moroccan Hammam Products Manufacturer, Marrakech"
+meta_description: "Moroccan hammam manufacturer based in Marrakech: black soap, ghassoul clay and kessa gloves for spas and brands worldwide. Quality control and export documents."
 main_keyword: "moroccan hammam products manufacturer"
 schema: ["AboutPage", "Organization", "Person"]
 ---
 
 # We Make the Products Moroccans Use in the Hammam
 
-In Morocco, the hammam is not a spa treatment. It is a weekly habit, done with the same few products for centuries: black soap, a kessa glove, ghassoul clay, and a little oil at the end. We grew up with these products. Today we make them in Agadir for spas, shops and brands across Europe, the Gulf, North America and beyond.
+In Morocco, the hammam is not a spa treatment. It is a weekly habit, done with the same few products for centuries: black soap, a kessa glove, ghassoul clay, and a little oil at the end. We grew up with these products. Today we make them in Marrakech for spas, shops and brands across Europe, the Gulf, North America and beyond.
 
 ## [story] Our story
 
-Moroccan Hammam Products started in Agadir to give international buyers one reliable source for the full hammam ritual. Early export clients needed black soap that looked, smelled and performed the same from batch to batch. We built our process around that consistency: fixed recipes, cured soap, batch numbers and retained samples for every production run.
+Moroccan Hammam Products started in Marrakech to give international buyers one reliable source for the full hammam ritual. Early export clients needed black soap that looked, smelled and performed the same from batch to batch. We built our process around that consistency: fixed recipes, cured soap, batch numbers and retained samples for every production run.
 
-Most conversations start on WhatsApp or email with our sales team in Agadir, who follow your quote, samples and shipment through to delivery.
+Most conversations start on WhatsApp or email with our sales team in Marrakech, who follow your quote, samples and shipment through to delivery.
 
 ## [origins] Where our products come from
 
-- **Black soap:** made in our Agadir workshop from olive oil, olive paste and potash, then cured for several weeks before packing.
+- **Black soap:** made in our Marrakech workshop from olive oil, olive paste and potash, then cured for several weeks before packing.
 - **Ghassoul clay:** sourced from licensed mines in the Middle Atlas, washed, sun-dried and sieved.
 - **Kessa gloves:** woven by partner workshops in Morocco, with firm and soft grades for spas and retail.
 - **Argan and prickly pear oils:** cold-pressed in the Souss region, sourced from women's cooperatives and licensed presses.
@@ -46,7 +46,7 @@ We supply the paperwork your customs broker and quality team expect:
 
 ## [team] The team
 
-You work directly with our sales and export team in Agadir: quotes, samples, label checks and shipping updates on WhatsApp or email. Production and quality staff in our workshop prepare your order; we do not hand you off to a call centre.
+You work directly with our sales and export team in Marrakech: quotes, samples, label checks and shipping updates on WhatsApp or email. Production and quality staff in our workshop prepare your order; we do not hand you off to a call centre.
 
 ## [numbers] Our numbers
 

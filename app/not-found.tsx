@@ -5,7 +5,7 @@ export default function NotFound() {
   return (
     <div className="mx-auto flex min-h-[70vh] max-w-lg flex-col items-center justify-center px-4 pt-28 text-center">
       <p className="text-sm font-semibold uppercase tracking-wider text-accent">404</p>
-      <h1 className="mt-2 font-serif text-4xl text-ink">Page not found</h1>
+      <h1 className="mt-2 font-serif text-4xl font-bold tracking-tight text-ink">Page not found</h1>
       <p className="mt-4 text-ink/80">
         That page may have moved. Start from home, explore private label, or request a quote.
       </p>

@@ -26,7 +26,7 @@ export function BlogCard({ post, locale }: { post: BlogPost; locale: Locale }) {
         <p className="text-xs font-semibold uppercase tracking-wider text-accent">
           {post.frontmatter.category}
         </p>
-        <h2 className="mt-2 font-serif text-xl leading-snug text-ink">
+        <h2 className="mt-2 font-serif text-xl font-bold leading-snug text-ink">
           <Link href={href} className="hover:text-primary">
             {post.h1}
           </Link>

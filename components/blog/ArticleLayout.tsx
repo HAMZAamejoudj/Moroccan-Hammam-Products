@@ -55,7 +55,7 @@ export function ArticleLayout({
               <p className="text-xs font-semibold uppercase tracking-[0.2em] text-accent">
                 {post.frontmatter.category}
               </p>
-              <h1 className="mt-3 font-serif text-4xl leading-tight text-ink md:text-[2.75rem]">
+              <h1 className="mt-3 font-serif text-4xl font-bold leading-tight text-ink md:text-[2.75rem]">
                 {post.h1}
               </h1>
               <p className="mt-4 text-sm text-ink/70">
@@ -112,7 +112,7 @@ export function ArticleLayout({
 
         {related.length > 0 ? (
           <section className="mt-16 pt-4">
-            <h2 className="font-serif text-2xl text-ink md:text-3xl">{ui.relatedArticles}</h2>
+            <h2 className="font-serif text-2xl font-bold text-ink md:text-3xl">{ui.relatedArticles}</h2>
             <div className="mt-8 grid gap-6 md:grid-cols-3">
               {related.map((p) => (
                 <BlogCard key={p.frontmatter.slug} post={p} locale={locale} />

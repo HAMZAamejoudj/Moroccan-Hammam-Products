@@ -4,7 +4,7 @@ seo_title: "Savon noir marocain en gros : repérer la vraie qualité"
 meta_description: "Tous les savons beldi ne se valent pas. Comment le vrai savon noir marocain est fabriqué, les 5 contrôles qui démasquent un produit bon marché, et quel type convient au spa ou au détail."
 main_keyword: "moroccan black soap wholesale"
 category: "Guides produits"
-author: "Équipe Moroccan Hammam Products, Agadir"
+author: "Équipe Moroccan Hammam Products, Marrakech"
 date: "2026-10-08"
 reading_time: "6 min"
 schema: ["Article", "FAQPage"]

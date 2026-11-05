@@ -3,7 +3,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import { siteLogo } from "@/lib/images";
-import { homePath, localeDirection, localePagePath, type Locale } from "@/lib/i18n/config";
+import { homePath, localeDirection, localePagePath, productPath, type Locale } from "@/lib/i18n/config";
 import type { FooterProductLink } from "@/lib/i18n/messages";
 import { useActiveLocale } from "@/components/i18n/useActiveLocale";
 import { getFooterUi, getNavItems } from "@/lib/i18n/messages";
@@ -18,6 +18,9 @@ export type FooterConfig = {
 };
 
 function footerProductHref(locale: Locale, item: FooterProductLink) {
+  if (item.slug) {
+    return productPath(locale, item.slug);
+  }
   if (item.page === "private-label") {
     return localePagePath(locale, "private-label");
   }
@@ -41,30 +44,35 @@ export function Footer({ config }: { config: FooterConfig }) {
       lang={activeLocale}
     >
       <MoroccanPattern className="pointer-events-none absolute right-4 top-4 h-24 w-24 text-gold opacity-40" />
-      <div suppressHydrationWarning className="mx-auto max-w-6xl px-4 pb-10">
-        <Link href={homePath(activeLocale)} className="inline-block">
-          <Image
-            src={siteLogo.src}
-            alt={config.brand_name}
-            width={siteLogo.width}
-            height={siteLogo.height}
-            className="h-14 w-auto max-w-[260px] object-contain md:h-16 md:max-w-[300px]"
-          />
-        </Link>
-      </div>
       <div suppressHydrationWarning className="mx-auto grid max-w-6xl gap-10 px-4 md:grid-cols-2 lg:grid-cols-4">
-        <div suppressHydrationWarning>
-          <h2 className="font-serif text-lg text-ink">{ui.aboutHeading}</h2>
-          <p className="mt-3 text-sm leading-relaxed text-ink/80">{ui.aboutBlurb}</p>
+        {/* Column 1: Brand Logo & Blurb */}
+        <div suppressHydrationWarning className="flex flex-col">
+          <Link href={homePath(activeLocale)} className="inline-block">
+            <Image
+              src={siteLogo.src}
+              alt={config.brand_name}
+              width={siteLogo.width}
+              height={siteLogo.height}
+              className="h-14 w-auto max-w-[220px] object-contain object-left rtl:object-right md:h-16 md:max-w-[240px]"
+            />
+          </Link>
+          <h2 className="sr-only">{ui.aboutHeading}</h2>
+          <p className="mt-4 text-sm font-medium leading-relaxed text-ink md:text-[0.95rem]">
+            {ui.aboutBlurb}
+          </p>
         </div>
+
+        {/* Column 2: Products */}
         <div suppressHydrationWarning>
-          <h2 className="font-serif text-lg text-ink">{ui.productsHeading}</h2>
-          <ul className="mt-3 space-y-1 text-sm">
+          <h2 className="font-serif text-xl font-bold tracking-tight text-ink md:text-2xl">
+            {ui.productsHeading}
+          </h2>
+          <ul className="mt-4 space-y-2 text-sm md:text-[0.95rem]">
             {ui.products.map((p) => (
               <li key={p.label}>
                 <Link
                   href={footerProductHref(activeLocale, p)}
-                  className="link-underline text-ink/80 hover:text-ink"
+                  className="link-underline font-semibold text-ink transition-colors hover:text-primary"
                 >
                   {p.label}
                 </Link>
@@ -72,40 +80,86 @@ export function Footer({ config }: { config: FooterConfig }) {
             ))}
           </ul>
         </div>
+
+        {/* Column 3: Company */}
         <div suppressHydrationWarning>
-          <h2 className="font-serif text-lg text-ink">{ui.companyHeading}</h2>
-          <ul className="mt-3 space-y-1 text-sm">
+          <h2 className="font-serif text-xl font-bold tracking-tight text-ink md:text-2xl">
+            {ui.companyHeading}
+          </h2>
+          <ul className="mt-4 space-y-2 text-sm md:text-[0.95rem]">
             {nav.map((n) => (
               <li key={n.href}>
-                <Link className="link-underline text-ink/80" href={n.href}>
+                <Link
+                  className="link-underline font-semibold text-ink transition-colors hover:text-primary"
+                  href={n.href}
+                >
                   {n.label}
                 </Link>
               </li>
             ))}
           </ul>
         </div>
+
+        {/* Column 4: Contact */}
         <div suppressHydrationWarning>
-          <h2 className="font-serif text-lg text-ink">{ui.contactHeading}</h2>
-          <ul className="mt-3 space-y-2 text-sm text-ink/80">
+          <h2 className="font-serif text-xl font-bold tracking-tight text-ink md:text-2xl">
+            {ui.contactHeading}
+          </h2>
+          <ul className="mt-4 space-y-2.5 text-sm font-medium text-ink md:text-[0.95rem]">
             <li>
-              <a className="link-underline" href={whatsappUrl(config.whatsapp)}>
-                {ui.whatsAppLabel} / {config.phone}
+              <a
+                href={whatsappUrl(config.whatsapp)}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="link-underline font-bold text-primary transition-colors hover:text-accent"
+              >
+                {ui.whatsAppLabel}
               </a>
             </li>
             <li>
-              <a className="link-underline" href={`mailto:${config.email}`}>
+              <a
+                className="link-underline font-semibold text-ink transition-colors hover:text-primary"
+                href={`mailto:${config.email}`}
+              >
                 {config.email}
               </a>
             </li>
-            <li>{ui.officeAddress}</li>
-            <li>{ui.hours}</li>
+            <li>
+              <a
+                className="link-underline font-semibold text-ink transition-colors hover:text-primary"
+                href={`tel:${config.phone}`}
+              >
+                {config.phone}
+              </a>
+            </li>
+            <li className="font-semibold text-ink">{ui.officeAddress}</li>
+            <li className="font-medium text-ink/90">{ui.hours}</li>
           </ul>
         </div>
       </div>
-      <div suppressHydrationWarning className="mx-auto mt-12 max-w-6xl border-t border-gold/20 px-4 pt-6 text-xs text-ink/70">
-        <p>
+
+      {/* Bottom Bar: Copyright & Legal */}
+      <div
+        suppressHydrationWarning
+        className="mx-auto mt-12 flex max-w-6xl flex-col items-center justify-between gap-4 border-t border-gold/15 px-4 pt-8 text-xs font-semibold text-ink/80 sm:flex-row md:text-sm"
+      >
+        <p suppressHydrationWarning>
           © {year} {config.brand_name}. {ui.rightsReserved}
         </p>
+        <div suppressHydrationWarning className="flex flex-wrap gap-5">
+          <Link
+            className="link-underline font-semibold text-ink transition-colors hover:text-primary"
+            href="/privacy-policy"
+          >
+            Privacy policy
+          </Link>
+          <Link
+            className="link-underline font-semibold text-ink transition-colors hover:text-primary"
+            href="/terms"
+          >
+            Terms and conditions
+          </Link>
+        </div>
       </div>
     </footer>
   );
