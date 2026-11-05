@@ -50,6 +50,17 @@ If `RESEND_API_KEY` is missing, submissions are logged to the server console and
 - `npm run lint` — ESLint
 - `npm start` — serve production build
 
+## Multi-Language & Locales
+
+The site supports 3 full locales with dedicated content and automated RTL support:
+- `/en` — English (default)
+- `/fr` — French
+- `/ar` — Arabic (RTL layout)
+
+## Wholesale Products Catalog
+
+Dedicated product specification pages are located under `/[locale]/products/[slug]` with technical data, packaging options, and export certification details.
+
 ## Placeholders
 
 Owner placeholders in copy are marked with a dashed underline on the site. See `PLACEHOLDERS.md` for the full list.
